@@ -5,7 +5,7 @@ This document sets forth the licenses under which the design and code in this re
 
 The visual design features of the Army Geospatial Center (AGC) https://www.agc.army.mil/ Releasable Basemap Tiles (RBT) Styles (also known as the "look and feel" of the map) are licensed under the Creative Commons Attribution-ShareAlike 4.0 International license. To view a copy of the license, visit https://creativecommons.org/licenses/by-sa/4.0/. Attribution need not be provided on map images, but should be reasonably accessable from maps based on on these styles (for example, in a webpage linked from copyright notice on the map). Products or services using maps derived from this style's layers property or sprite icons need to visibly credit 'https://www.agc.army.mil' or reference 'ArmyGeospatialCenter' with a link to https://www.agc.army.mil/.
 
-Example Attribution: <a href=\\\"https://www.agc.army.mil\\\" target=\\\"_blank\\\">&copy; ArmyGeospatialCenter</a>
+Example Attribution: `<a href=\\\"https://www.agc.army.mil\\\" target=\\\"_blank\\\">&copy; ArmyGeospatialCenter</a>`
 
 
 # Fonts and sprites
