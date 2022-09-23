@@ -1,0 +1,5227 @@
+{
+    "version": 8,
+    "name": "RBT-TPC-3395",
+    "owner": {
+        "owner:name": "Army Geospatial Center",
+        "owner:website": "https://www.agc.army.mil/"
+    },
+    "metadata": {
+        "license:info": {
+            "data:licence": "© OpenStreetMap contributor https://www.openstreetmap.org/copyright",
+            "style:license": {
+                "licensing:disclaimer": "The visual design features of this style's layers including the sprite icons are licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.",
+                "licensing:url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "licensing:attribution": "Products or services using maps derived from this style's layers property or sprite icons need to visibly credit 'agc.army.mil' or reference 'ArmyGeospatialCenter' with a link to https://www.agc.army.mil/."
+            }
+        },
+        "creators:info": {
+            "creators:name": "Team GDIT",
+            "creators:websites": "https://www.gdit.com/ & https://www.axismaps.com/"
+        }
+    },
+    "sources": {
+        "RBT": {
+            "url": "mbtiles://{RBT}",
+            "type": "vector"
+        },
+        "DAM": {
+            "url": "mbtiles://{DAM}",
+            "type": "vector"
+        },
+        "LANDCOVER": {
+            "url": "mbtiles://{LANDCOVER}",
+            "type": "vector"
+        },
+        "HILLSHADE": {
+            "tileSize": 256,
+            "type": "raster",
+            "url": "mbtiles://{HILLSHADE_2016}"
+        }
+    },
+    "sprite": "{styleJsonFolder}/sprite",
+    "glyphs": "{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "rgba(240,238,233,1)"
+            }
+        },
+        {
+            "id": "glacier--fill--level1",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "ne_glacier_iceshelf",
+            "maxzoom": 8,
+            "filter": [
+                "in",
+                "featurecla",
+                "Glaciated areas"
+            ],
+            "paint": {
+                "fill-color": "rgba(255,255,255,1)"
+            }
+        },
+        {
+            "id": "glacier--fill--pattern--level1",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "ne_glacier_iceshelf",
+            "maxzoom": 8,
+            "filter": [
+                "in",
+                "featurecla",
+                "Glaciated areas"
+            ],
+            "paint": {
+                "fill-pattern": "glacier-level1"
+            }
+        },
+        {
+            "id": "glacier--fill--level2",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "glacier_icesheet",
+            "minzoom": 8,
+            "paint": {
+                "fill-color": "rgba(255,255,255,0.8)"
+            }
+        },
+        {
+            "id": "glacier--fill--pattern--level2",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "glacier_icesheet",
+            "minzoom": 8,
+            "paint": {
+                "fill-pattern": "glacier-level2"
+            }
+        },
+        {
+            "id": "glacier--line--level2",
+            "type": "line",
+            "source": "LANDCOVER",
+            "source-layer": "glacier_icesheet",
+            "minzoom": 8,
+            "paint": {
+                "line-color": "rgba(0,160,223,1)",
+                "line-dasharray": [
+                    12,
+                    3
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.1,
+                    10,
+                    0.7,
+                    18,
+                    1.2
+                ]
+            }
+        },
+        {
+            "id": "marsh--fill--pattern",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "marsh",
+            "minzoom": 8,
+            "paint": {
+                "fill-pattern": "marsh-level1"
+            }
+        },
+        {
+            "id": "marsh--line",
+            "type": "line",
+            "source": "LANDCOVER",
+            "source-layer": "marsh",
+            "minzoom": 12,
+            "paint": {
+                "line-color": "rgba(0,160,223,1)",
+                "line-dasharray": [
+                    1,
+                    2
+                ],
+                "line-width": 1
+            }
+        },
+        {
+            "id": "swamp--fill--pattern",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "swamp",
+            "minzoom": 8,
+            "paint": {
+                "fill-pattern": "swamp-other-level1"
+            }
+        },
+        {
+            "id": "swamp--line",
+            "type": "line",
+            "source": "LANDCOVER",
+            "source-layer": "swamp",
+            "minzoom": 12,
+            "paint": {
+                "line-color": "rgba(0,160,223,1)",
+                "line-dasharray": [
+                    1,
+                    2
+                ],
+                "line-width": 1
+            }
+        },
+        {
+            "id": "park--fill",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "park",
+            "paint": {
+                "fill-color": "rgba(200,224,217,1)"
+            }
+        },
+        {
+            "id": "park--line",
+            "type": "line",
+            "source": "LANDCOVER",
+            "source-layer": "park",
+            "paint": {
+                "line-color": "rgba(23,158,106,1)",
+                "line-dasharray": [
+                    8,
+                    4
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0,
+                    10,
+                    0.5,
+                    18,
+                    1
+                ]
+            }
+        },
+        {
+            "id": "hillshade",
+            "type": "raster",
+            "source": "HILLSHADE",
+            "paint": {
+                "raster-opacity": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    15,
+                    0.2,
+                    16,
+                    0
+                ]
+            }
+        },
+        {
+            "id": "river--perennial--level1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "river",
+            "minzoom": 5,
+            "maxzoom": 8,
+            "paint": {
+                "line-color": "rgba(0,160,223,1)",
+                "line-width": 0.3
+            }
+        },
+        {
+            "id": "river--perennial--level2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "waterway",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "river",
+                    true,
+                    "stream",
+                    true,
+                    false
+                ],
+                [
+                    "case",
+                    [
+                        "boolean",
+                        [
+                            "get",
+                            "intermittent"
+                        ],
+                        false
+                    ],
+                    false,
+                    true
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "has",
+                        "name"
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(0,160,223,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.3,
+                    10,
+                    0.6,
+                    18,
+                    1.2
+                ]
+            }
+        },
+        {
+            "id": "ocean--level1",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "ocean_ne",
+            "maxzoom": 8,
+            "paint": {
+                "fill-color": "rgba(158,210,241,1)"
+            }
+        },
+        {
+            "id": "lakes--level1",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "water_ne",
+            "maxzoom": 8,
+            "paint": {
+                "fill-color": "rgba(158,210,241,1)"
+            }
+        },
+        {
+            "id": "water--level2",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "osm_water",
+            "minzoom": 8,
+            "paint": {
+                "fill-color": "rgba(158,210,241,1)",
+                "fill-outline-color": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    "rgba(0,160,223,0)",
+                    10,
+                    "rgba(0,160,223,1)"
+                ]
+            }
+        },
+        {
+            "id": "water--level2--intermittent--pattern",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "inland_water_intermittent",
+            "minzoom": 8,
+            "paint": {
+                "fill-pattern": "dry-drainage-level1"
+            }
+        },
+        {
+            "id": "water--level2--intermittent--line",
+            "type": "line",
+            "source": "LANDCOVER",
+            "source-layer": "inland_water_intermittent",
+            "minzoom": 10,
+            "paint": {
+                "line-color": "rgba(0,160,223,1)",
+                "line-dasharray": [
+                    12,
+                    3
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0.2,
+                    18,
+                    1.2
+                ]
+            }
+        },
+        {
+            "id": "iceShelf--fill--level1",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "ne_glacier_iceshelf",
+            "maxzoom": 8,
+            "filter": [
+                "in",
+                "featurecla",
+                "Antarctic Ice Shelf"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "rgba(255,255,255,1)"
+            }
+        },
+        {
+            "id": "iceShelf--fill--pattern--level1",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "ne_glacier_iceshelf",
+            "maxzoom": 8,
+            "filter": [
+                "in",
+                "featurecla",
+                "Antarctic Ice Shelf"
+            ],
+            "paint": {
+                "fill-pattern": "glacier-level1"
+            }
+        },
+        {
+            "id": "builtUpArea--level1",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "ne_builtup_area",
+            "minzoom": 3,
+            "maxzoom": 8,
+            "paint": {
+                "fill-color": "rgba(255,221,22,0.8)",
+                "fill-outline-color": "rgba(153,153,153,0.5)"
+            }
+        },
+        {
+            "id": "builtUpArea--level2",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "osm_builtup_area",
+            "minzoom": 8,
+            "paint": {
+                "fill-color": "rgba(255,221,22,0.8)",
+                "fill-outline-color": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    "rgba(153,153,153,0.5)",
+                    10,
+                    "rgba(153,153,153,1)"
+                ]
+            }
+        },
+        {
+            "id": "contour",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "contour",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    ">",
+                    [
+                        "get",
+                        "elevation"
+                    ],
+                    0
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "all",
+                        [
+                            "match",
+                            [
+                                "get",
+                                "nth_line"
+                            ],
+                            10,
+                            true,
+                            false
+                        ],
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                200
+                            ],
+                            0
+                        ]
+                    ],
+                    11,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "nth_line"
+                        ],
+                        10,
+                        true,
+                        false
+                    ],
+                    12,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "nth_line"
+                        ],
+                        [
+                            5,
+                            10
+                        ],
+                        true,
+                        false
+                    ],
+                    13,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "nth_line"
+                        ],
+                        [
+                            2,
+                            10
+                        ],
+                        true,
+                        false
+                    ],
+                    14,
+                    true
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(149,80,88,1)",
+                "line-opacity": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                800
+                            ],
+                            0
+                        ],
+                        0.9,
+                        0.7
+                    ],
+                    11,
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                400
+                            ],
+                            0
+                        ],
+                        0.9,
+                        0.7
+                    ],
+                    12,
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                200
+                            ],
+                            0
+                        ],
+                        0.9,
+                        0.7
+                    ],
+                    13,
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                100
+                            ],
+                            0
+                        ],
+                        0.9,
+                        0.7
+                    ],
+                    14,
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                50
+                            ],
+                            0
+                        ],
+                        0.9,
+                        0.7
+                    ]
+                ],
+                "line-width": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                800
+                            ],
+                            0
+                        ],
+                        0.6,
+                        0.3
+                    ],
+                    11,
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                400
+                            ],
+                            0
+                        ],
+                        0.6,
+                        0.3
+                    ],
+                    12,
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                200
+                            ],
+                            0
+                        ],
+                        0.6,
+                        0.3
+                    ],
+                    13,
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                100
+                            ],
+                            0
+                        ],
+                        0.6,
+                        0.3
+                    ],
+                    14,
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                50
+                            ],
+                            0
+                        ],
+                        0.6,
+                        0.3
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "pipeline--below--surface",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "pipeline",
+            "minzoom": 10,
+            "filter": [
+                "==",
+                "location",
+                "underground"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-pattern": [
+                    "match",
+                    [
+                        "get",
+                        "substance"
+                    ],
+                    [
+                        "Water",
+                        "water"
+                    ],
+                    "pipeline-below-surface-water",
+                    "pipeline-below-surface"
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    4,
+                    16,
+                    8
+                ]
+            }
+        },
+		{
+			"id": "dam--surface--fill",
+			"type": "fill",
+			"source": "DAM",
+			"source-layer": "dam_surface",
+			"minzoom": 10,
+			"paint": {
+				"fill-color": "rgba(75,75,75,0.3)"
+			}
+		},
+		{
+			"id": "dam--surface--line",
+			"type": "line",
+			"source": "DAM",
+			"source-layer": "dam_surface",
+			"minzoom": 10,
+			"layout": {
+				"line-join": "round"
+			},
+			"paint": {
+				"line-color": "rgba(75,75,75,1)",
+				"line-width": [
+					"interpolate",
+					[
+						"exponential",
+						1.3
+					],
+					[
+						"zoom"
+					],
+					10,
+					1,
+					18,
+					8
+				]
+			}
+		},
+		{
+			"id": "dam--line",
+			"type": "line",
+			"source": "DAM",
+			"source-layer": "dam_curve",
+			"minzoom": 10,
+			"layout": {
+				"line-join": "round",
+				"visibility": "visible"
+			},
+			"paint": {
+				"line-color": "rgba(75,75,75,1)",
+				"line-width": [
+					"interpolate",
+					[
+						"exponential",
+						1.3
+					],
+					[
+						"zoom"
+					],
+					10,
+					1,
+					18,
+					8
+				]
+			}
+		},
+		{
+			"id": "dam--point",
+			"type": "circle",
+			"source": "DAM",
+			"source-layer": "dam_label",
+			"minzoom": 10,
+			"filter": [
+				"==",
+				"dam_srf_crv_intersect",
+				"N"
+			],
+			"paint": {
+				"circle-color": "rgba(75,75,75,0)",
+				"circle-radius": [
+					"interpolate",
+					[
+						"exponential",
+						1.3
+					],
+					[
+						"zoom"
+					],
+					10,
+					1.5,
+					16,
+					4
+				],
+				"circle-stroke-color": "rgba(75,75,75,1)",
+				"circle-stroke-width": [
+					"interpolate",
+					[
+						"exponential",
+						1.3
+					],
+					[
+						"zoom"
+					],
+					10,
+					1,
+					18,
+					4
+				]
+			}
+		},
+        {
+            "id": "militaryInstallation--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "us_military_installations",
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "rgba(158,158,158,0.6)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    7,
+                    2.5,
+                    10,
+                    4,
+                    16,
+                    8
+                ]
+            }
+        },
+        {
+            "id": "militaryInstallation--line2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "us_military_installations",
+            "paint": {
+                "line-color": "rgb(0,0,0)",
+                "line-dasharray": [
+                    "literal",
+                    [
+                        12,
+                        4,
+                        1,
+                        4
+                    ]
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.9
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    0.7,
+                    16,
+                    1.2
+                ]
+            }
+        },
+        {
+            "id": "pipeline--on--surface",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "pipeline",
+            "minzoom": 10,
+            "filter": [
+                "any",
+                [
+                    "!",
+                    [
+                        "has",
+                        "location"
+                    ]
+                ],
+                [
+                    "==",
+                    [
+                        "get",
+                        "location"
+                    ],
+                    "surface"
+                ]
+            ],
+            "paint": {
+                "line-pattern": [
+                    "match",
+                    [
+                        "get",
+                        "substance"
+                    ],
+                    [
+                        "Water",
+                        "water"
+                    ],
+                    "pipeline-on-surface-water",
+                    "pipeline-on-surface"
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    4,
+                    16,
+                    8
+                ]
+            }
+        },
+        {
+            "id": "railwaySidetrack--line",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "sidetrack_intact_broadstandard_nonelectrified",
+                        true,
+                        "sidetrack_intact_broadstandard_electrified",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "service"
+                        ],
+                        "yard",
+                        false,
+                        "siding",
+                        false,
+                        true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "abandoned",
+                        false,
+                        "disused",
+                        false,
+                        true
+                    ]
+                ],
+                13,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "sidetrack_intact_broadstandard_nonelectrified",
+                        true,
+                        "sidetrack_intact_broadstandard_electrified",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "abandoned",
+                        false,
+                        "disused",
+                        false,
+                        true
+                    ]
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0.5,
+                    18,
+                    1
+                ]
+            }
+        },
+        {
+            "id": "railwaySidetrack--pattern",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 10,
+            "maxzoom": 11,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "dps_type",
+                    "sidetrack_intact_broadstandard_nonelectrified",
+                    "sidetrack_intact_broadstandard_electrified"
+                ],
+                [
+                    "!in",
+                    "service",
+                    "yard",
+                    "siding"
+                ],
+                [
+                    "!in",
+                    "subclass",
+                    "abandoned",
+                    "disused"
+                ]
+            ],
+            "paint": {
+                "line-pattern": "railway-1track",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    5,
+                    11,
+                    6
+                ]
+            }
+        },
+        {
+            "id": "railway--line",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "dps_type",
+                    "railway_intact_broadstandard_nonelectrified_singletrack",
+                    "railway_intact_broadstandard_electrified_singletrack",
+                    "railway_intact_broadstandard_nonelectrified_multipletracks",
+                    "railway_intact_broadstandard_electrified_multipletracks"
+                ],
+                [
+                    "!in",
+                    "subclass",
+                    "abandoned",
+                    "disused"
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.5,
+                    10,
+                    1,
+                    18,
+                    2
+                ]
+            }
+        },
+        {
+            "id": "railway--1track--pattern",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "dps_type",
+                    "railway_intact_broadstandard_nonelectrified_singletrack",
+                    "railway_intact_broadstandard_electrified_singletrack"
+                ],
+                [
+                    "!in",
+                    "subclass",
+                    "abandoned",
+                    "disused"
+                ]
+            ],
+            "paint": {
+                "line-pattern": "railway-1track",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    5,
+                    11,
+                    6
+                ]
+            }
+        },
+        {
+            "id": "railway--2orMoreTracks--pattern",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "dps_type",
+                    "railway_intact_broadstandard_nonelectrified_multipletracks",
+                    "railway_intact_broadstandard_electrified_multipletracks"
+                ],
+                [
+                    "!in",
+                    "subclass",
+                    "abandoned",
+                    "disused"
+                ]
+            ],
+            "paint": {
+                "line-pattern": "railway-2orMoreTracks",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    5,
+                    11,
+                    6
+                ]
+            }
+        },
+        {
+            "id": "road--divided--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 8,
+            "filter": [
+                "in",
+                "subclass",
+                "motorway",
+                "trunk"
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    7,
+                    0.5,
+                    10,
+                    3,
+                    18,
+                    20
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    0,
+                    10,
+                    0.25,
+                    11,
+                    0.5,
+                    18,
+                    3
+                ]
+            }
+        },
+        {
+            "id": "road--notDivided--1or2Lanes",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 10,
+            "filter": [
+                "==",
+                "subclass",
+                "secondary"
+            ],
+            "layout": {
+                "line-cap": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(149,80,88,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    10
+                ]
+            }
+        },
+        {
+            "id": "road--notDivided--moreThan2Lanes",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 8,
+            "filter": [
+                "==",
+                "subclass",
+                "primary"
+            ],
+            "layout": {
+                "line-cap": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(149,80,88,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.75,
+                    10,
+                    1.5,
+                    18,
+                    12
+                ]
+            }
+        },
+        {
+            "id": "road--divided--line2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "filter": [
+                "in",
+                "subclass",
+                "motorway",
+                "trunk"
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(149,80,88,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    7,
+                    0.5,
+                    10,
+                    3,
+                    18,
+                    20
+                ]
+            }
+        },
+        {
+            "id": "road--divided--line3",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "filter": [
+                "in",
+                "subclass",
+                "motorway",
+                "trunk"
+            ],
+            "layout": {
+                "line-cap": "round"
+            },
+            "paint": {
+                "line-color": "rgba(255,255,255,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    0,
+                    10,
+                    0.7,
+                    18,
+                    3
+                ]
+            }
+        },
+        {
+            "id": "pipeline--above--surface",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "pipeline",
+            "minzoom": 10,
+            "filter": [
+                "==",
+                "location",
+                "overhead"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-pattern": [
+                    "match",
+                    [
+                        "get",
+                        "substance"
+                    ],
+                    [
+                        "Water",
+                        "water"
+                    ],
+                    "pipeline-above-surface-water",
+                    "pipeline-above-surface"
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    4,
+                    16,
+                    8
+                ]
+            }
+        },
+        {
+            "id": "cable--nonObstruction--other",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "powerline",
+            "minzoom": 10,
+            "filter": [
+                "any",
+                [
+                    "all",
+                    [
+                        "any",
+                        [
+                            "!has",
+                            "location"
+                        ],
+                        [
+                            "==",
+                            "location",
+                            "overhead"
+                        ]
+                    ],
+                    [
+                        "in",
+                        "usage",
+                        "Barrier",
+                        "Cableway",
+                        "Guide",
+                        "Load Bearing",
+                        "Restraining",
+                        "Towing"
+                    ]
+                ],
+                [
+                    "==",
+                    "location",
+                    "underground"
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(0,0,0,1)",
+                "line-dasharray": [
+                    16,
+                    4
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0.5,
+                    16,
+                    1
+                ]
+            }
+        },
+        {
+            "id": "cable--nonObstruction--power",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "powerline",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "any",
+                    [
+                        "!has",
+                        "location"
+                    ],
+                    [
+                        "==",
+                        "location",
+                        "overhead"
+                    ]
+                ],
+                [
+                    "!in",
+                    "usage",
+                    "Barrier",
+                    "Cableway",
+                    "Guide",
+                    "Load Bearing",
+                    "Restraining",
+                    "Towing"
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-pattern": [
+                    "match",
+                    [
+                        "get",
+                        "usage"
+                    ],
+                    [
+                        "transmission",
+                        "Power Transmission Line"
+                    ],
+                    "cable-nonObstruction-powerTransmission",
+                    "cable-nonObstruction-communication-powerDistribution"
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    12,
+                    16,
+                    24
+                ]
+            }
+        },
+        {
+            "id": "admin--firstOrder--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "adm1_lines",
+            "minzoom": 7,
+            "layout": {
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    7,
+                    "rgba(214,184,194,0.6)",
+                    10,
+                    "rgba(194,151,165,0.6)"
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    7,
+                    2.5,
+                    10,
+                    4,
+                    16,
+                    8
+                ]
+            }
+        },
+        {
+            "id": "admin--firstOrder--line2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "adm1_lines",
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "iso_3"
+                    ],
+                    "CAN",
+                    true,
+                    "USA",
+                    true,
+                    "BRA",
+                    true,
+                    "RUS",
+                    true,
+                    "CHN",
+                    true,
+                    "IND",
+                    true,
+                    "AUS",
+                    true,
+                    "MEX",
+                    true,
+                    "ARG",
+                    true,
+                    "KAZ",
+                    true,
+                    false
+                ],
+                5,
+                [
+                    "match",
+                    [
+                        "get",
+                        "iso_3"
+                    ],
+                    "PRI",
+                    false,
+                    "CHE",
+                    false,
+                    "LUX",
+                    false,
+                    "LIE",
+                    false,
+                    "MDA",
+                    false,
+                    true
+                ],
+                6,
+                true
+            ],
+            "layout": {
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    3,
+                    "rgba(153,153,153,1)",
+                    10,
+                    "rgba(0,0,0,1)"
+                ],
+                "line-dasharray": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "literal",
+                        [
+                            4,
+                            4
+                        ]
+                    ],
+                    8,
+                    [
+                        "literal",
+                        [
+                            20,
+                            6,
+                            1,
+                            6
+                        ]
+                    ]
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.9
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    3,
+                    0.5,
+                    10,
+                    1,
+                    16,
+                    1.5
+                ]
+            }
+        },
+        {
+            "id": "admin--otherSeparation--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "adm0_lines",
+            "filter": [
+                "in",
+                "status",
+                "Other Line of International Separation",
+                "Special Line",
+                "Special, scale-dependent line"
+            ],
+            "layout": {
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    3,
+                    "rgba(194,151,165,1)",
+                    10,
+                    "rgba(194,151,165,0.6)"
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.6
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    0.8,
+                    10,
+                    8,
+                    16,
+                    16
+                ]
+            }
+        },
+        {
+            "id": "admin--otherSeparation--line2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "adm0_lines",
+            "minzoom": 7,
+            "filter": [
+                "in",
+                "status",
+                "Other Line of International Separation",
+                "Special Line",
+                "Special, scale-dependent line"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(149,80,88,1)",
+                "line-dasharray": [
+                    20,
+                    3,
+                    6,
+                    3,
+                    6,
+                    3
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    7,
+                    0.5,
+                    10,
+                    1.5,
+                    16,
+                    2
+                ]
+            }
+        },
+        {
+            "id": "admin--international--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "adm0_lines",
+            "filter": [
+                "==",
+                "status",
+                "International Boundary"
+            ],
+            "layout": {
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    3,
+                    "rgba(180,127,140,1)",
+                    10,
+                    "rgba(180,127,140,0.6)"
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.6
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    0.8,
+                    10,
+                    8,
+                    16,
+                    16
+                ]
+            }
+        },
+        {
+            "id": "admin--international--line2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "adm0_lines",
+            "minzoom": 7,
+            "filter": [
+                "==",
+                "status",
+                "International Boundary"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(0,0,0,1)",
+                "line-dasharray": [
+                    20,
+                    3,
+                    6,
+                    3,
+                    6,
+                    3
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    7,
+                    0.5,
+                    10,
+                    1.5,
+                    16,
+                    2
+                ]
+            }
+        },
+        {
+            "id": "contour--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "contour",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    ">",
+                    [
+                        "get",
+                        "elevation"
+                    ],
+                    0
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "all",
+                        [
+                            "match",
+                            [
+                                "get",
+                                "nth_line"
+                            ],
+                            10,
+                            true,
+                            false
+                        ],
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                800
+                            ],
+                            0
+                        ]
+                    ],
+                    11,
+                    [
+                        "all",
+                        [
+                            "match",
+                            [
+                                "get",
+                                "nth_line"
+                            ],
+                            10,
+                            true,
+                            false
+                        ],
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                400
+                            ],
+                            0
+                        ]
+                    ],
+                    12,
+                    [
+                        "all",
+                        [
+                            "match",
+                            [
+                                "get",
+                                "nth_line"
+                            ],
+                            [
+                                5,
+                                10
+                            ],
+                            true,
+                            false
+                        ],
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                200
+                            ],
+                            0
+                        ]
+                    ],
+                    13,
+                    [
+                        "all",
+                        [
+                            "match",
+                            [
+                                "get",
+                                "nth_line"
+                            ],
+                            [
+                                2,
+                                5,
+                                10
+                            ],
+                            true,
+                            false
+                        ],
+                        [
+                            "==",
+                            [
+                                "%",
+                                [
+                                    "to-number",
+                                    [
+                                        "get",
+                                        "elevation"
+                                    ]
+                                ],
+                                100
+                            ],
+                            0
+                        ]
+                    ],
+                    14,
+                    [
+                        "==",
+                        [
+                            "%",
+                            [
+                                "to-number",
+                                [
+                                    "get",
+                                    "elevation"
+                                ]
+                            ],
+                            50
+                        ],
+                        0
+                    ]
+                ]
+            ],
+            "layout": {
+                "symbol-avoid-edges": true,
+                "symbol-placement": "line",
+                "symbol-spacing": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    11,
+                    40,
+                    12,
+                    100
+                ],
+                "text-field": "{elevation}",
+                "text-font": [
+                    "NGATopo_Cn_ita"
+                ],
+                "text-max-angle": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    90,
+                    11,
+                    45
+                ],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    10,
+                    18,
+                    12
+                ],
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(149,80,88,1)",
+                "text-halo-blur": 0,
+                "text-halo-color": "rgba(255,255,255,0.6)",
+                "text-halo-width": 1
+            }
+        },
+        {
+            "id": "water--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "geonames_hydrographic",
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "nt"
+                        ],
+                        "C"
+                    ],
+                    [
+                        "==",
+                        [
+                            "get",
+                            "dsg"
+                        ],
+                        "OCN"
+                    ]
+                ],
+                4,
+                [
+                    "all",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "nt"
+                        ],
+                        "C"
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dsg"
+                        ],
+                        "OCN",
+                        true,
+                        "SEA",
+                        true,
+                        false
+                    ]
+                ],
+                5,
+                [
+                    "all",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "nt"
+                        ],
+                        "C"
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dsg"
+                        ],
+                        "OCN",
+                        true,
+                        "SEA",
+                        true,
+                        "GULF",
+                        true,
+                        false
+                    ]
+                ],
+                7,
+                [
+                    "all",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "nt"
+                        ],
+                        "C"
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dsg"
+                        ],
+                        "OCN",
+                        true,
+                        "SEA",
+                        true,
+                        "GULF",
+                        true,
+                        "CHN",
+                        true,
+                        "STRT",
+                        true,
+                        "BAY",
+                        true,
+                        "HBR",
+                        true,
+                        "LK",
+                        true,
+                        "LKS",
+                        true,
+                        false
+                    ]
+                ]
+            ],
+            "layout": {
+                "symbol-avoid-edges": true,
+                "text-field": "{full_name_ro}",
+                "text-font": [
+                    "NGATopo_Cn_ita",
+                    "Arial-Unicode-Italic"
+                ],
+                "text-letter-spacing": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    0.05,
+                    4,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dsg"
+                        ],
+                        "OCN",
+                        0.2,
+                        0.05
+                    ],
+                    8,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dsg"
+                        ],
+                        [
+                            "OCN",
+                            "SEA"
+                        ],
+                        0.2,
+                        0.05
+                    ]
+                ],
+                "text-max-width": 3,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    2,
+                    12,
+                    10,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dsg"
+                        ],
+                        "OCN",
+                        30,
+                        "SEA",
+                        20,
+                        "GULF",
+                        16,
+                        14
+                    ]
+                ]
+            },
+            "paint": {
+                "text-color": "rgba(0,160,223,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": [
+                    "match",
+                    [
+                        "get",
+                        "full_name_ro"
+                    ],
+                    "Aral Sea",
+                    "rgba(240,236,233,1)",
+                    "rgba(158,210,241,1)"
+                ],
+                "text-halo-width": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    8,
+                    1.5
+                ]
+            }
+        },
+        {
+            "id": "landAerodrome--minor",
+            "type": "circle",
+            "source": "RBT",
+            "source-layer": "airports",
+            "minzoom": 10,
+            "filter": [
+                "any",
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "small_airport",
+                        true,
+                        "medium_airport",
+                        true,
+                        "large_airport",
+                        true,
+                        "closed",
+                        false,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "runway_surface"
+                        ],
+                        "ASP",
+                        false,
+                        "ASP/CON",
+                        false,
+                        "ASP/CONC",
+                        false,
+                        "ASPH",
+                        false,
+                        "ASPH/CONC",
+                        false,
+                        "ASPHALT",
+                        false,
+                        "Asfalt",
+                        false,
+                        "Asfalto",
+                        false,
+                        "Asph",
+                        false,
+                        "Asph/Conc",
+                        false,
+                        "Asphalt",
+                        false,
+                        "Asphalt/Concrete",
+                        false,
+                        "BRI",
+                        false,
+                        "BRICK",
+                        false,
+                        "Brick",
+                        false,
+                        "COP",
+                        false,
+                        "Composite",
+                        false,
+                        "CON",
+                        false,
+                        "CON/ASP",
+                        false,
+                        "CONC",
+                        false,
+                        "Concrete",
+                        false,
+                        "CONC-GRVD",
+                        false,
+                        "PEM",
+                        false,
+                        "PER",
+                        false,
+                        "Permanent",
+                        false,
+                        true
+                    ]
+                ],
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "small_airport",
+                        true,
+                        "medium_airport",
+                        true,
+                        "large_airport",
+                        true,
+                        "closed",
+                        false,
+                        false
+                    ],
+                    [
+                        "<",
+                        [
+                            "to-number",
+                            [
+                                "get",
+                                "runway_length_ft"
+                            ]
+                        ],
+                        3000
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "rgba(255,255,255,1)",
+                "circle-radius": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    8
+                ],
+                "circle-stroke-color": "rgba(56,70,157,0.8)",
+                "circle-stroke-width": 2
+            }
+        },
+        {
+            "id": "landAerodrome--major",
+            "type": "circle",
+            "source": "RBT",
+            "source-layer": "airports",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "small_airport",
+                    true,
+                    "medium_airport",
+                    true,
+                    "large_airport",
+                    true,
+                    "closed",
+                    false,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "runway_surface"
+                    ],
+                    "ASP",
+                    true,
+                    "ASP/CON",
+                    true,
+                    "ASP/CONC",
+                    true,
+                    "ASPH",
+                    true,
+                    "ASPH/CONC",
+                    true,
+                    "ASPHALT",
+                    true,
+                    "Asfalt",
+                    true,
+                    "Asfalto",
+                    true,
+                    "Asph",
+                    true,
+                    "Asph/Conc",
+                    true,
+                    "Asphalt",
+                    true,
+                    "Asphalt/Concrete",
+                    true,
+                    "BRI",
+                    true,
+                    "BRICK",
+                    true,
+                    "Brick",
+                    true,
+                    "COP",
+                    true,
+                    "Composite",
+                    true,
+                    "CON",
+                    true,
+                    "CON/ASP",
+                    true,
+                    "CONC",
+                    true,
+                    "Concrete",
+                    true,
+                    "CONC-GRVD",
+                    true,
+                    "PEM",
+                    true,
+                    "PER",
+                    true,
+                    "Permanent",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        ">=",
+                        [
+                            "to-number",
+                            [
+                                "get",
+                                "runway_length_ft"
+                            ]
+                        ],
+                        9000
+                    ],
+                    9,
+                    [
+                        ">=",
+                        [
+                            "to-number",
+                            [
+                                "get",
+                                "runway_length_ft"
+                            ]
+                        ],
+                        6000
+                    ],
+                    10,
+                    [
+                        ">=",
+                        [
+                            "to-number",
+                            [
+                                "get",
+                                "runway_length_ft"
+                            ]
+                        ],
+                        3000
+                    ]
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "rgba(56,70,157,0.8)",
+                "circle-radius": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    10,
+                    10,
+                    18
+                ]
+            }
+        },
+        {
+            "id": "routeMarker--national--nonUSA",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "route_marker",
+            "minzoom": 9,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "primary"
+                ],
+                [
+                    "==",
+                    [
+                        "get",
+                        "usa"
+                    ],
+                    0
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "ref_len"
+                        ],
+                        6
+                    ],
+                    11,
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "ref_len"
+                        ],
+                        10
+                    ]
+                ]
+            ],
+            "layout": {
+                "icon-image": "routeMarker-national-nonUSA",
+                "icon-rotation-alignment": "viewport",
+                "icon-text-fit": "both",
+                "icon-text-fit-padding": [
+                    -1,
+                    3,
+                    -2,
+                    3
+                ],
+                "symbol-placement": "line",
+                "symbol-spacing": 1000,
+                "text-field": "{ref}",
+                "text-font": [
+                    "NGATopo_Cn_reg",
+                    "Arial-Unicode-Regular"
+                ],
+                "text-letter-spacing": 0.05,
+                "text-rotation-alignment": "viewport",
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    9,
+                    13,
+                    11
+                ],
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)"
+            }
+        },
+        {
+            "id": "routeMarker--national--USA",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "route_marker",
+            "minzoom": 9,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "trunk",
+                    true,
+                    "primary",
+                    true,
+                    false
+                ],
+                [
+                    "==",
+                    [
+                        "get",
+                        "usa"
+                    ],
+                    1
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "ref_len"
+                        ],
+                        6
+                    ],
+                    11,
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "ref_len"
+                        ],
+                        10
+                    ]
+                ]
+            ],
+            "layout": {
+                "icon-image": "routeMarker-national-USA",
+                "icon-rotation-alignment": "viewport",
+                "icon-text-fit": "both",
+                "icon-text-fit-padding": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    [
+                        "literal",
+                        [
+                            1,
+                            1.5,
+                            -1.5,
+                            1.5
+                        ]
+                    ],
+                    13,
+                    [
+                        "literal",
+                        [
+                            1,
+                            3,
+                            -2,
+                            3
+                        ]
+                    ]
+                ],
+                "symbol-placement": "line",
+                "symbol-spacing": 1000,
+                "text-field": "{ref}",
+                "text-font": [
+                    "NGATopo_Cn_reg",
+                    "Arial-Unicode-Regular"
+                ],
+                "text-letter-spacing": 0.05,
+                "text-rotation-alignment": "viewport",
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    9,
+                    13,
+                    11
+                ],
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)"
+            }
+        },
+        {
+            "id": "routeMarker--nationalMotorway--nonUSA",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "route_marker",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "trunk"
+                ],
+                [
+                    "==",
+                    [
+                        "get",
+                        "usa"
+                    ],
+                    0
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "ref_len"
+                        ],
+                        6
+                    ],
+                    11,
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "ref_len"
+                        ],
+                        10
+                    ]
+                ]
+            ],
+            "layout": {
+                "icon-image": "routeMarker-nationalMotorway-nonUSA",
+                "icon-rotation-alignment": "viewport",
+                "icon-text-fit": "both",
+                "icon-text-fit-padding": [
+                    -1,
+                    3,
+                    -2,
+                    3
+                ],
+                "symbol-placement": "line",
+                "symbol-spacing": 1000,
+                "text-field": "{ref}",
+                "text-font": [
+                    "NGATopo_Cn_reg",
+                    "Arial-Unicode-Regular"
+                ],
+                "text-letter-spacing": 0.05,
+                "text-rotation-alignment": "viewport",
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    9,
+                    13,
+                    11
+                ],
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)"
+            }
+        },
+        {
+            "id": "routeMarker--nationalMotorway--USA",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "route_marker",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "motorway"
+                ],
+                [
+                    "==",
+                    [
+                        "get",
+                        "usa"
+                    ],
+                    1
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "ref_len"
+                        ],
+                        6
+                    ],
+                    11,
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "ref_len"
+                        ],
+                        10
+                    ]
+                ]
+            ],
+            "layout": {
+                "icon-image": "routeMarker-nationalMotorway-USA",
+                "icon-rotation-alignment": "viewport",
+                "icon-text-fit": "both",
+                "icon-text-fit-padding": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    [
+                        "literal",
+                        [
+                            1,
+                            1.5,
+                            -1,
+                            1.5
+                        ]
+                    ],
+                    13,
+                    [
+                        "literal",
+                        [
+                            1,
+                            2,
+                            -1.5,
+                            2
+                        ]
+                    ]
+                ],
+                "symbol-placement": "line",
+                "text-field": "{ref}",
+                "text-font": [
+                    "NGATopo_Cn_reg",
+                    "Arial-Unicode-Regular"
+                ],
+                "text-letter-spacing": 0.05,
+                "text-rotation-alignment": "viewport",
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    9,
+                    13,
+                    11
+                ],
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)"
+            }
+        },
+        {
+            "id": "routeMarker--international--nonUSA",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "route_marker",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "motorway"
+                ],
+                [
+                    "==",
+                    [
+                        "get",
+                        "usa"
+                    ],
+                    0
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "ref_len"
+                        ],
+                        6
+                    ],
+                    11,
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "ref_len"
+                        ],
+                        10
+                    ]
+                ]
+            ],
+            "layout": {
+                "icon-image": "routeMarker-international",
+                "icon-rotation-alignment": "viewport",
+                "icon-text-fit": "both",
+                "icon-text-fit-padding": [
+                    0,
+                    4,
+                    -2,
+                    4
+                ],
+                "symbol-placement": "line",
+                "text-field": "{ref}",
+                "text-font": [
+                    "NGATopo_Cn_reg",
+                    "Arial-Unicode-Regular"
+                ],
+                "text-letter-spacing": 0.05,
+                "text-rotation-alignment": "viewport",
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    9,
+                    13,
+                    11
+                ],
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)"
+            }
+        },
+        {
+            "id": "heliport",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "airports",
+            "minzoom": 10,
+            "filter": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                "heliport",
+                true,
+                false
+            ],
+            "layout": {
+                "icon-image": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    "heliport-18",
+                    14,
+                    "heliport-20",
+                    16,
+                    "heliport-22"
+                ],
+                "symbol-avoid-edges": true
+            }
+        },
+        {
+            "id": "city--class1--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "populated_places",
+            "minzoom": 7,
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "!=",
+                    [
+                        "get",
+                        "capital"
+                    ],
+                    2
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "all",
+                        [
+                            "match",
+                            [
+                                "get",
+                                "rank"
+                            ],
+                            8,
+                            true,
+                            9,
+                            true,
+                            10,
+                            true,
+                            false
+                        ],
+                        [
+                            "match",
+                            [
+                                "get",
+                                "class"
+                            ],
+                            "city",
+                            true,
+                            "town",
+                            true,
+                            "village",
+                            true,
+                            "hamlet",
+                            true,
+                            false
+                        ]
+                    ],
+                    9,
+                    [
+                        "any",
+                        [
+                            "all",
+                            [
+                                "match",
+                                [
+                                    "get",
+                                    "rank"
+                                ],
+                                8,
+                                true,
+                                9,
+                                true,
+                                10,
+                                true,
+                                false
+                            ],
+                            [
+                                "match",
+                                [
+                                    "get",
+                                    "class"
+                                ],
+                                "city",
+                                true,
+                                "town",
+                                true,
+                                "village",
+                                true,
+                                "hamlet",
+                                true,
+                                false
+                            ]
+                        ],
+                        [
+                            "step",
+                            [
+                                "zoom"
+                            ],
+                            [
+                                "all",
+                                [
+                                    "==",
+                                    [
+                                        "get",
+                                        "rank"
+                                    ],
+                                    11
+                                ],
+                                [
+                                    "match",
+                                    [
+                                        "get",
+                                        "class"
+                                    ],
+                                    "city",
+                                    true,
+                                    false
+                                ]
+                            ],
+                            10,
+                            [
+                                "all",
+                                [
+                                    "==",
+                                    [
+                                        "get",
+                                        "rank"
+                                    ],
+                                    11
+                                ],
+                                [
+                                    "match",
+                                    [
+                                        "get",
+                                        "class"
+                                    ],
+                                    "city",
+                                    true,
+                                    "town",
+                                    true,
+                                    false
+                                ]
+                            ],
+                            11,
+                            [
+                                "all",
+                                [
+                                    "==",
+                                    [
+                                        "get",
+                                        "rank"
+                                    ],
+                                    11
+                                ],
+                                [
+                                    "match",
+                                    [
+                                        "get",
+                                        "class"
+                                    ],
+                                    "city",
+                                    true,
+                                    "town",
+                                    true,
+                                    "village",
+                                    true,
+                                    false
+                                ]
+                            ],
+                            12,
+                            [
+                                "all",
+                                [
+                                    "==",
+                                    [
+                                        "get",
+                                        "rank"
+                                    ],
+                                    11
+                                ],
+                                [
+                                    "match",
+                                    [
+                                        "get",
+                                        "class"
+                                    ],
+                                    "city",
+                                    true,
+                                    "town",
+                                    true,
+                                    "village",
+                                    true,
+                                    "hamlet",
+                                    true,
+                                    false
+                                ]
+                            ],
+                            13,
+                            [
+                                "all",
+                                [
+                                    ">=",
+                                    [
+                                        "get",
+                                        "rank"
+                                    ],
+                                    11
+                                ],
+                                [
+                                    "match",
+                                    [
+                                        "get",
+                                        "class"
+                                    ],
+                                    "city",
+                                    true,
+                                    "town",
+                                    true,
+                                    "village",
+                                    true,
+                                    "hamlet",
+                                    true,
+                                    false
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ],
+            "layout": {
+                "icon-image": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    "dot-4",
+                    8,
+                    "dot-5",
+                    10,
+                    "dot-6",
+                    11,
+                    ""
+                ],
+                "symbol-avoid-edges": true,
+                "text-field": [
+                    "coalesce",
+                    [
+                        "get",
+                        "name_en"
+                    ],
+                    [
+                        "get",
+                        "name"
+                    ]
+                ],
+                "text-font": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "literal",
+                        [
+                            "NGATopo_Cn_reg",
+                            "Arial-Unicode-Regular"
+                        ]
+                    ],
+                    13,
+                    [
+                        "literal",
+                        [
+                            "NGATopo_Cn_bld",
+                            "Arial-Unicode-Bold"
+                        ]
+                    ]
+                ],
+                "text-justify": "auto",
+                "text-max-width": 6,
+                "text-radial-offset": 0.05,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    7,
+                    13,
+                    10,
+                    15,
+                    18,
+                    18
+                ],
+                "text-variable-anchor": {
+                    "stops": [
+                        [
+                            0,
+                            [
+                                "bottom-left",
+                                "top-left",
+                                "bottom-right",
+                                "top-right",
+                                "left",
+                                "right",
+                                "bottom",
+                                "top"
+                            ]
+                        ],
+                        [
+                            11,
+                            [
+                                "center"
+                            ]
+                        ]
+                    ]
+                },
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1
+            }
+        },
+        {
+            "id": "city--class2--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "populated_places",
+            "minzoom": 5,
+            "maxzoom": 16,
+            "filter": [
+                "all",
+                [
+                    "!=",
+                    [
+                        "get",
+                        "capital"
+                    ],
+                    2
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "class"
+                    ],
+                    "city",
+                    true,
+                    "town",
+                    true,
+                    "village",
+                    true,
+                    "hamlet",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        6,
+                        true,
+                        false
+                    ],
+                    6,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        6,
+                        true,
+                        7,
+                        true,
+                        false
+                    ]
+                ]
+            ],
+            "layout": {
+                "icon-image": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    "dot-4",
+                    7,
+                    "dot-5",
+                    8,
+                    "dot-6",
+                    9,
+                    "dot-7",
+                    10,
+                    ""
+                ],
+                "symbol-avoid-edges": true,
+                "text-field": [
+                    "coalesce",
+                    [
+                        "get",
+                        "name_en"
+                    ],
+                    [
+                        "get",
+                        "name"
+                    ]
+                ],
+                "text-font": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "literal",
+                        [
+                            "NGATopo_Cn_reg",
+                            "Arial-Unicode-Regular"
+                        ]
+                    ],
+                    13,
+                    [
+                        "literal",
+                        [
+                            "NGATopo_Cn_bld",
+                            "Arial-Unicode-Bold"
+                        ]
+                    ]
+                ],
+                "text-justify": "auto",
+                "text-max-width": 6,
+                "text-radial-offset": 0.1,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    4,
+                    10,
+                    10,
+                    20,
+                    13,
+                    26
+                ],
+                "text-variable-anchor": {
+                    "stops": [
+                        [
+                            0,
+                            [
+                                "bottom-left",
+                                "top-left",
+                                "bottom-right",
+                                "top-right",
+                                "left",
+                                "right",
+                                "bottom",
+                                "top"
+                            ]
+                        ],
+                        [
+                            10,
+                            [
+                                "center"
+                            ]
+                        ]
+                    ]
+                },
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    8,
+                    1.5
+                ]
+            }
+        },
+        {
+            "id": "city--class3--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "populated_places",
+            "minzoom": 5,
+            "maxzoom": 15,
+            "filter": [
+                "all",
+                [
+                    "!=",
+                    "capital",
+                    2
+                ],
+                [
+                    "==",
+                    "rank",
+                    5
+                ],
+                [
+                    "in",
+                    "class",
+                    "city",
+                    "town",
+                    "village",
+                    "hamlet"
+                ]
+            ],
+            "layout": {
+                "icon-image": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    "dot-4",
+                    6,
+                    "dot-5",
+                    7,
+                    "dot-6",
+                    9,
+                    ""
+                ],
+                "symbol-avoid-edges": true,
+                "text-field": [
+                    "coalesce",
+                    [
+                        "get",
+                        "name_en"
+                    ],
+                    [
+                        "get",
+                        "name"
+                    ]
+                ],
+                "text-font": [
+                    "NGATopo_Cn_bld",
+                    "Arial-Unicode-Bold"
+                ],
+                "text-justify": "auto",
+                "text-max-width": 6,
+                "text-radial-offset": 0.15,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    4,
+                    10,
+                    10,
+                    20,
+                    13,
+                    26
+                ],
+                "text-variable-anchor": {
+                    "stops": [
+                        [
+                            0,
+                            [
+                                "bottom-left",
+                                "top-left",
+                                "bottom-right",
+                                "top-right",
+                                "left",
+                                "right",
+                                "bottom",
+                                "top"
+                            ]
+                        ],
+                        [
+                            9,
+                            [
+                                "center"
+                            ]
+                        ]
+                    ]
+                },
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    8,
+                    1.5
+                ]
+            }
+        },
+        {
+            "id": "admin--firstOrderUSA--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "gadm1_name",
+            "maxzoom": 11,
+            "filter": [
+                "match",
+                [
+                    "get",
+                    "gid_0"
+                ],
+                "USA",
+                true,
+                false
+            ],
+            "layout": {
+                "symbol-avoid-edges": true,
+                "text-field": "{name_1}",
+                "text-font": [
+                    "NGATopo_Cn_bld",
+                    "Arial-Unicode-Bold"
+                ],
+                "text-letter-spacing": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    0.05,
+                    6,
+                    0.2,
+                    8,
+                    0.4
+                ],
+                "text-max-width": 6,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    3,
+                    9,
+                    10,
+                    18
+                ],
+                "text-transform": "uppercase",
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    "rgba(128,128,128,1)",
+                    8,
+                    "rgba(0,0,0,1)"
+                ],
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    8,
+                    1.5
+                ]
+            }
+        },
+        {
+            "id": "admin--firstOrder--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "adm1_labels",
+            "maxzoom": 13,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "iso_3"
+                    ],
+                    "CAN",
+                    true,
+                    "BRA",
+                    true,
+                    "RUS",
+                    true,
+                    "CHN",
+                    true,
+                    "IND",
+                    true,
+                    "AUS",
+                    true,
+                    false
+                ],
+                6,
+                [
+                    "match",
+                    [
+                        "get",
+                        "iso_3"
+                    ],
+                    "CAN",
+                    true,
+                    "BRA",
+                    true,
+                    "RUS",
+                    true,
+                    "CHN",
+                    true,
+                    "IND",
+                    true,
+                    "AUS",
+                    true,
+                    "GBR",
+                    true,
+                    "FRA",
+                    true,
+                    "DEU",
+                    true,
+                    "ESP",
+                    true,
+                    "MEX",
+                    true,
+                    "ARG",
+                    true,
+                    "KAZ",
+                    true,
+                    "MNG",
+                    true,
+                    "UKR",
+                    true,
+                    "BLR",
+                    true,
+                    "POL",
+                    true,
+                    "IDN",
+                    true,
+                    "ISL",
+                    true,
+                    "GRL",
+                    true,
+                    false
+                ],
+                7,
+                [
+                    "match",
+                    [
+                        "get",
+                        "iso_3"
+                    ],
+                    "USA",
+                    false,
+                    "CHE",
+                    false,
+                    "LUX",
+                    false,
+                    "LIE",
+                    false,
+                    "SVN",
+                    false,
+                    "LVA",
+                    false,
+                    "MNE",
+                    false,
+                    "XKO",
+                    false,
+                    "MDA",
+                    false,
+                    "AZE",
+                    false,
+                    "UGA",
+                    false,
+                    "BTN",
+                    false,
+                    "THA",
+                    false,
+                    "KHM",
+                    false,
+                    "VNM",
+                    false,
+                    "LAO",
+                    false,
+                    "PHL",
+                    false,
+                    "PRI",
+                    false,
+                    "SLV",
+                    false,
+                    "GTM",
+                    false,
+                    true
+                ],
+                9,
+                [
+                    "match",
+                    [
+                        "get",
+                        "iso_3"
+                    ],
+                    "USA",
+                    false,
+                    "PRI",
+                    false,
+                    "LUX",
+                    false,
+                    "LIE",
+                    false,
+                    true
+                ],
+                11,
+                [
+                    "match",
+                    [
+                        "get",
+                        "iso_3"
+                    ],
+                    "PRI",
+                    true,
+                    "LUX",
+                    true,
+                    "LIE",
+                    true,
+                    "IRL",
+                    true,
+                    false
+                ]
+            ],
+            "layout": {
+                "symbol-avoid-edges": true,
+                "text-field": "{adm1_name}",
+                "text-font": [
+                    "NGATopo_Cn_bld",
+                    "Arial-Unicode-Bold"
+                ],
+                "text-letter-spacing": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    0.05,
+                    6,
+                    0.2,
+                    8,
+                    0.4
+                ],
+                "text-max-width": 6,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    3,
+                    9,
+                    10,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "iso_3"
+                        ],
+                        [
+                            "MEX",
+                            "ARG",
+                            "GBR",
+                            "FRA",
+                            "DEU",
+                            "ESP",
+                            "RUS",
+                            "KAZ",
+                            "UKR",
+                            "MNG",
+                            "BLR",
+                            "POL"
+                        ],
+                        14,
+                        [
+                            "CAN",
+                            "USA",
+                            "BRA",
+                            "IND",
+                            "CHN",
+                            "AUS"
+                        ],
+                        18,
+                        12
+                    ],
+                    13,
+                    18
+                ],
+                "text-transform": "uppercase",
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    "rgba(128,128,128,1)",
+                    8,
+                    "rgba(0,0,0,1)"
+                ],
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    8,
+                    1.5
+                ]
+            }
+        },
+        {
+            "id": "landAerodrome--minor--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "airports",
+            "minzoom": 10,
+            "filter": [
+                "any",
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "small_airport",
+                        true,
+                        "medium_airport",
+                        true,
+                        "large_airport",
+                        true,
+                        "closed",
+                        false,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "runway_surface"
+                        ],
+                        "ASP",
+                        false,
+                        "ASP/CON",
+                        false,
+                        "ASP/CONC",
+                        false,
+                        "ASPH",
+                        false,
+                        "ASPH/CONC",
+                        false,
+                        "ASPHALT",
+                        false,
+                        "Asfalt",
+                        false,
+                        "Asfalto",
+                        false,
+                        "Asph",
+                        false,
+                        "Asph/Conc",
+                        false,
+                        "Asphalt",
+                        false,
+                        "Asphalt/Concrete",
+                        false,
+                        "BRI",
+                        false,
+                        "BRICK",
+                        false,
+                        "Brick",
+                        false,
+                        "COP",
+                        false,
+                        "Composite",
+                        false,
+                        "CON",
+                        false,
+                        "CON/ASP",
+                        false,
+                        "CONC",
+                        false,
+                        "Concrete",
+                        false,
+                        "CONC-GRVD",
+                        false,
+                        "PEM",
+                        false,
+                        "PER",
+                        false,
+                        "Permanent",
+                        false,
+                        true
+                    ]
+                ],
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "small_airport",
+                        true,
+                        "medium_airport",
+                        true,
+                        "large_airport",
+                        true,
+                        "closed",
+                        false,
+                        false
+                    ],
+                    [
+                        "<",
+                        [
+                            "to-number",
+                            [
+                                "get",
+                                "runway_length_ft"
+                            ]
+                        ],
+                        3000
+                    ]
+                ]
+            ],
+            "layout": {
+                "symbol-avoid-edges": true,
+                "text-field": [
+                    "format",
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "get",
+                                "type"
+                            ],
+                            "closed"
+                        ],
+                        "CLOSED\n",
+                        ""
+                    ],
+                    [
+                        "get",
+                        "name"
+                    ],
+                    " ",
+                    [
+                        "coalesce",
+                        [
+                            "get",
+                            "icao"
+                        ],
+                        [
+                            "get",
+                            "iata"
+                        ]
+                    ],
+                    [
+                        "case",
+                        [
+                            "has",
+                            "runway_length_ft"
+                        ],
+                        [
+                            "concat",
+                            "/",
+                            [
+                                "round",
+                                [
+                                    "/",
+                                    [
+                                        "to-number",
+                                        [
+                                            "get",
+                                            "runway_length_ft"
+                                        ]
+                                    ],
+                                    100
+                                ]
+                            ]
+                        ],
+                        ""
+                    ],
+                    "\n",
+                    [
+                        "get",
+                        "elevation_ft"
+                    ],
+                    {
+                        "text-font": [
+                            "literal",
+                            [
+                                "NGATopo_Cn_bld",
+                                "Arial-Unicode-Bold"
+                            ]
+                        ]
+                    }
+                ],
+                "text-font": [
+                    "NGATopo_Cn_reg",
+                    "Arial-Unicode-Regular"
+                ],
+                "text-justify": "auto",
+                "text-radial-offset": 0.6,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    13,
+                    16,
+                    18
+                ],
+                "text-transform": "uppercase",
+                "text-variable-anchor": [
+                    "bottom-left",
+                    "top-left",
+                    "bottom-right",
+                    "top-right",
+                    "left",
+                    "right",
+                    "bottom",
+                    "top"
+                ],
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(56,70,157,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1.5
+            }
+        },
+        {
+            "id": "landAerodrome--major--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "airports",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "small_airport",
+                    true,
+                    "medium_airport",
+                    true,
+                    "large_airport",
+                    true,
+                    "closed",
+                    false,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "runway_surface"
+                    ],
+                    "ASP",
+                    true,
+                    "ASP/CON",
+                    true,
+                    "ASP/CONC",
+                    true,
+                    "ASPH",
+                    true,
+                    "ASPH/CONC",
+                    true,
+                    "ASPHALT",
+                    true,
+                    "Asfalt",
+                    true,
+                    "Asfalto",
+                    true,
+                    "Asph",
+                    true,
+                    "Asph/Conc",
+                    true,
+                    "Asphalt",
+                    true,
+                    "Asphalt/Concrete",
+                    true,
+                    "BRI",
+                    true,
+                    "BRICK",
+                    true,
+                    "Brick",
+                    true,
+                    "COP",
+                    true,
+                    "Composite",
+                    true,
+                    "CON",
+                    true,
+                    "CON/ASP",
+                    true,
+                    "CONC",
+                    true,
+                    "Concrete",
+                    true,
+                    "CONC-GRVD",
+                    true,
+                    "PEM",
+                    true,
+                    "PER",
+                    true,
+                    "Permanent",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        ">=",
+                        [
+                            "to-number",
+                            [
+                                "get",
+                                "runway_length_ft"
+                            ]
+                        ],
+                        9000
+                    ],
+                    9,
+                    [
+                        ">=",
+                        [
+                            "to-number",
+                            [
+                                "get",
+                                "runway_length_ft"
+                            ]
+                        ],
+                        6000
+                    ],
+                    10,
+                    [
+                        ">=",
+                        [
+                            "to-number",
+                            [
+                                "get",
+                                "runway_length_ft"
+                            ]
+                        ],
+                        3000
+                    ]
+                ]
+            ],
+            "layout": {
+                "symbol-avoid-edges": true,
+                "text-field": [
+                    "format",
+                    [
+                        "case",
+                        [
+                            "==",
+                            [
+                                "get",
+                                "type"
+                            ],
+                            "closed"
+                        ],
+                        "CLOSED\n",
+                        ""
+                    ],
+                    [
+                        "get",
+                        "name"
+                    ],
+                    " ",
+                    [
+                        "coalesce",
+                        [
+                            "get",
+                            "icao"
+                        ],
+                        [
+                            "get",
+                            "iata"
+                        ]
+                    ],
+                    [
+                        "case",
+                        [
+                            "has",
+                            "runway_length_ft"
+                        ],
+                        [
+                            "concat",
+                            "/",
+                            [
+                                "round",
+                                [
+                                    "/",
+                                    [
+                                        "to-number",
+                                        [
+                                            "get",
+                                            "runway_length_ft"
+                                        ]
+                                    ],
+                                    100
+                                ]
+                            ]
+                        ],
+                        ""
+                    ],
+                    "\n",
+                    [
+                        "get",
+                        "elevation_ft"
+                    ],
+                    {
+                        "text-font": [
+                            "literal",
+                            [
+                                "NGATopo_Cn_bld",
+                                "Arial-Unicode-Bold"
+                            ]
+                        ]
+                    }
+                ],
+                "text-font": [
+                    "NGATopo_Cn_reg",
+                    "Arial-Unicode-Regular"
+                ],
+                "text-justify": "auto",
+                "text-radial-offset": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.6,
+                    10,
+                    1.2
+                ],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    13,
+                    16,
+                    18
+                ],
+                "text-transform": "uppercase",
+                "text-variable-anchor": [
+                    "bottom-left",
+                    "bottom-right",
+                    "top-left",
+                    "top-right",
+                    "left",
+                    "right",
+                    "bottom",
+                    "top"
+                ],
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(56,70,157,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1.5
+            }
+        },
+        {
+            "id": "militaryInstallation--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "us_military_installations_labels",
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    ">",
+                    [
+                        "get",
+                        "area"
+                    ],
+                    900000000
+                ],
+                10,
+                [
+                    ">",
+                    [
+                        "get",
+                        "area"
+                    ],
+                    100000000
+                ],
+                11,
+                [
+                    ">",
+                    [
+                        "get",
+                        "area"
+                    ],
+                    10000000
+                ],
+                12,
+                [
+                    ">",
+                    [
+                        "get",
+                        "area"
+                    ],
+                    1000000
+                ],
+                15,
+                true
+            ],
+            "layout": {
+                "symbol-avoid-edges": true,
+                "text-field": "{sitename}",
+                "text-font": [
+                    "NGATopo_Cn_reg",
+                    "Arial-Unicode-Regular"
+                ],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    [
+                        "interpolate",
+                        [
+                            "linear"
+                        ],
+                        [
+                            "get",
+                            "area"
+                        ],
+                        250000000,
+                        13,
+                        1000000000,
+                        18
+                    ],
+                    16,
+                    [
+                        "interpolate",
+                        [
+                            "linear"
+                        ],
+                        [
+                            "get",
+                            "area"
+                        ],
+                        250000000,
+                        18,
+                        1000000000,
+                        36
+                    ]
+                ],
+                "text-transform": "uppercase",
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgb(0,0,0)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1.5
+            }
+        },
+        {
+            "id": "city--class4--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "populated_places",
+            "minzoom": 4,
+            "maxzoom": 14,
+            "filter": [
+                "all",
+                [
+                    "!=",
+                    "capital",
+                    2
+                ],
+                [
+                    "in",
+                    "rank",
+                    3,
+                    4
+                ],
+                [
+                    "in",
+                    "class",
+                    "city",
+                    "town",
+                    "village",
+                    "hamlet"
+                ]
+            ],
+            "layout": {
+                "icon-image": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    "dot-4",
+                    5,
+                    "dot-5",
+                    6,
+                    "dot-6",
+                    7,
+                    "dot-7",
+                    8,
+                    ""
+                ],
+                "symbol-avoid-edges": true,
+                "text-field": [
+                    "coalesce",
+                    [
+                        "get",
+                        "name_en"
+                    ],
+                    [
+                        "get",
+                        "name"
+                    ]
+                ],
+                "text-font": [
+                    "NGATopo_Cn_bld",
+                    "Arial-Unicode-Bold"
+                ],
+                "text-justify": "auto",
+                "text-max-width": 6,
+                "text-radial-offset": 0.2,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    4,
+                    10,
+                    10,
+                    20,
+                    13,
+                    26
+                ],
+                "text-transform": "uppercase",
+                "text-variable-anchor": {
+                    "stops": [
+                        [
+                            0,
+                            [
+                                "bottom-left",
+                                "top-left",
+                                "bottom-right",
+                                "top-right",
+                                "left",
+                                "right",
+                                "bottom",
+                                "top"
+                            ]
+                        ],
+                        [
+                            8,
+                            [
+                                "center"
+                            ]
+                        ]
+                    ]
+                },
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    8,
+                    1.5
+                ]
+            }
+        },
+        {
+            "id": "city--class5--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "populated_places",
+            "maxzoom": 13,
+            "filter": [
+                "all",
+                [
+                    "any",
+                    [
+                        "==",
+                        "capital",
+                        2
+                    ],
+                    [
+                        "in",
+                        "rank",
+                        1,
+                        2
+                    ]
+                ],
+                [
+                    "in",
+                    "class",
+                    "city",
+                    "town",
+                    "village",
+                    "hamlet"
+                ]
+            ],
+            "layout": {
+                "icon-image": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "capital"
+                        ],
+                        2,
+                        "circle-dot-6",
+                        "dot-4"
+                    ],
+                    4,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "capital"
+                        ],
+                        2,
+                        "circle-dot-7",
+                        "dot-5"
+                    ],
+                    5,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "capital"
+                        ],
+                        2,
+                        "circle-dot-8",
+                        "dot-6"
+                    ],
+                    6,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "capital"
+                        ],
+                        2,
+                        "circle-dot-9",
+                        "dot-7"
+                    ],
+                    7,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "capital"
+                        ],
+                        2,
+                        "circle-dot-10",
+                        "dot-8"
+                    ],
+                    8,
+                    ""
+                ],
+                "symbol-avoid-edges": true,
+                "text-field": [
+                    "coalesce",
+                    [
+                        "get",
+                        "name_en"
+                    ],
+                    [
+                        "get",
+                        "name"
+                    ]
+                ],
+                "text-font": [
+                    "NGATopo_Cn_bld",
+                    "Arial-Unicode-Bold"
+                ],
+                "text-justify": "auto",
+                "text-max-width": 8,
+                "text-radial-offset": 0.2,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    3,
+                    9,
+                    10,
+                    24,
+                    13,
+                    30
+                ],
+                "text-transform": "uppercase",
+                "text-variable-anchor": {
+                    "stops": [
+                        [
+                            0,
+                            [
+                                "bottom-left",
+                                "top-left",
+                                "bottom-right",
+                                "top-right",
+                                "left",
+                                "right",
+                                "bottom",
+                                "top"
+                            ]
+                        ],
+                        [
+                            8,
+                            [
+                                "center"
+                            ]
+                        ]
+                    ]
+                },
+                "visibility": "visible"
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    8,
+                    1.5
+                ]
+            }
+        },
+        {
+            "id": "admin--international--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "adm0_labels",
+            "maxzoom": 13,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    ">=",
+                    [
+                        "get",
+                        "area"
+                    ],
+                    25000000000
+                ],
+                3,
+                [
+                    "any",
+                    [
+                        "!",
+                        [
+                            "has",
+                            "area"
+                        ]
+                    ],
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "area"
+                        ],
+                        200000000
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "region1_nm"
+                        ],
+                        "Oceania",
+                        true,
+                        "Americas",
+                        true,
+                        false
+                    ]
+                ],
+                8,
+                [
+                    "any",
+                    [
+                        "!",
+                        [
+                            "has",
+                            "area"
+                        ]
+                    ],
+                    [
+                        "all",
+                        [
+                            "any",
+                            [
+                                ">=",
+                                [
+                                    "get",
+                                    "area"
+                                ],
+                                200000000
+                            ],
+                            [
+                                "match",
+                                [
+                                    "get",
+                                    "region1_nm"
+                                ],
+                                "Oceania",
+                                true,
+                                "Americas",
+                                true,
+                                false
+                            ]
+                        ],
+                        [
+                            "<",
+                            [
+                                "get",
+                                "area"
+                            ],
+                            2000000000000
+                        ]
+                    ]
+                ],
+                10,
+                [
+                    "any",
+                    [
+                        "!",
+                        [
+                            "has",
+                            "area"
+                        ]
+                    ],
+                    [
+                        "<",
+                        [
+                            "get",
+                            "area"
+                        ],
+                        25000000000
+                    ]
+                ]
+            ],
+            "layout": {
+                "symbol-avoid-edges": true,
+                "symbol-sort-key": [
+                    "to-number",
+                    [
+                        "concat",
+                        "-",
+                        [
+                            "get",
+                            "area"
+                        ]
+                    ]
+                ],
+                "text-field": "{adm0_name}",
+                "text-font": [
+                    "NGATopo_Cn_bld",
+                    "Arial-Unicode-Bold"
+                ],
+                "text-max-width": 6,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    [
+                        "case",
+                        [
+                            "has",
+                            "area"
+                        ],
+                        [
+                            "step",
+                            [
+                                "get",
+                                "area"
+                            ],
+                            9,
+                            25000000000,
+                            10,
+                            2000000000000,
+                            11
+                        ],
+                        9
+                    ],
+                    8,
+                    [
+                        "case",
+                        [
+                            "has",
+                            "area"
+                        ],
+                        [
+                            "step",
+                            [
+                                "get",
+                                "area"
+                            ],
+                            20,
+                            25000000000,
+                            30,
+                            2000000000000,
+                            40
+                        ],
+                        20
+                    ]
+                ]
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    1,
+                    8,
+                    1.5
+                ]
+            }
+        }
+    ],
+    "id": "RBT-TPC-3395"
+}
