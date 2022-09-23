@@ -1,0 +1,100 @@
+{
+    "options": {
+        "paths": {
+            "root": "",
+            "fonts": "../fonts",
+            "mbtiles": "../data",
+            "styles": "../styles"
+        },
+        "serveAllFonts": true
+    },
+    "data": {
+        "RBT": {
+            "mbtiles": "rbt.mbtiles"
+        },
+        "MAXAR_KYIV": {
+            "mbtiles": "kiev.mbtiles"
+        },
+        "HILLSHADE_2016": {
+            "mbtiles": "hillshade3395.mbtiles"
+        },
+        "DAM": {
+                "mbtiles": "dam.mbtiles"
+        },
+        "LANDCOVER": {
+                "mbtiles": "landcover.mbtiles"
+        }
+    },
+    "styles": {
+        "RBT-TPC-3395": {
+            "style": "RBT-TPC-3395/style.json",
+            "serve_data": true,
+            "serve_rendered": true,
+            "tilejson": {
+                "format": "png",
+                "bounds": [
+                    -180,
+                    -84,
+                    180,
+                    84
+                ]
+            }
+        },
+        "RBT-JOG-3395": {
+            "style": "RBT-JOG-3395/style.json",
+            "serve_data": true,
+            "serve_rendered": true,
+            "tilejson": {
+                "format": "png",
+                "bounds": [
+                    -180,
+                    -84,
+                    180,
+                    84
+                ]
+            }
+        },
+        "RBT-JOG-SATELLITE-3395": {
+            "style": "RBT-JOG-SATELLITE-3395/style.json",
+            "serve_data": true,
+            "serve_rendered": true,
+            "tilejson": {
+                "format": "png",
+                "bounds": [
+                    -180,
+                    -84,
+                    180,
+                    84
+                ]
+            }
+        },
+        "RBT-TLM-3395": {
+            "style": "RBT-TLM-3395/style.json",
+            "serve_data": true,
+            "serve_rendered": true,
+            "tilejson": {
+                "format": "png",
+                "bounds": [
+                    -180,
+                    -84,
+                    180,
+                    84
+                ]
+            }
+        },
+        "RBT-TLM-SATELLITE-3395": {
+            "style": "RBT-TLM-SATELLITE-3395/style.json",
+            "serve_data": true,
+            "serve_rendered": true,
+            "tilejson": {
+                "format": "png",
+                "bounds": [
+                    -180,
+                    -84,
+                    180,
+                    84
+                ]
+            }
+        }
+    }
+}
