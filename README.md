@@ -1,2 +1,2 @@
 # rbt
-Releasable Basemap Tiles 
+AGC Releasable Basemap Tiles (RBT)
