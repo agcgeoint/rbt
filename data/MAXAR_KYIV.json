@@ -10,7 +10,7 @@
     "bounds": [30.327497721628504, 49.74623287657128, 30.731687844709718, 50.465770860609325],
     "maxzoom": 19,
     "minzoom": 8,
-    "attribution": "<a href=\'https://www.maxar.com\'>&copy; Maxar</a>",
+    "attribution": "<a href='https://www.maxar.com'>&copy; Maxar</a>",
     "center": [30.52959278316911, 50.1060018685903, 13],
     "tilejson": "2.0.0"
 }
