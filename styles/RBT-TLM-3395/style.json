@@ -24,10 +24,6 @@
             "url": "mbtiles://{RBT}",
             "type": "vector"
         },
-        "DAM": {
-            "url": "mbtiles://{DAM}",
-            "type": "vector"
-        },
         "LANDCOVER": {
             "url": "mbtiles://{LANDCOVER}",
             "type": "vector"
@@ -35,7 +31,7 @@
         "HILLSHADE": {
             "tileSize": 256,
             "type": "raster",
-            "url": "mbtiles://{HILLSHADE_2016}"
+            "url": "mbtiles://{HILLSHADE}"
         }
     },
     "sprite": "{styleJsonFolder}/sprite",
@@ -1117,7 +1113,7 @@
         {
 			"id": "dam--surface--fill",
 			"type": "fill",
-			"source": "DAM",
+			"source": "RBT",
 			"source-layer": "dam_surface",
 			"minzoom": 10,
 			"paint": {
@@ -1144,7 +1140,7 @@
 		{
 			"id": "dam--surface--line",
 			"type": "line",
-			"source": "DAM",
+			"source": "RBT",
 			"source-layer": "dam_surface",
 			"minzoom": 10,
 			"layout": {
@@ -1188,7 +1184,7 @@
 		{
 			"id": "dam--line",
 			"type": "line",
-			"source": "DAM",
+			"source": "RBT",
 			"source-layer": "dam_curve",
 			"minzoom": 10,
 			"layout": {
@@ -1233,7 +1229,7 @@
 		{
 			"id": "dam--point",
 			"type": "circle",
-			"source": "DAM",
+			"source": "RBT",
 			"source-layer": "dam_label",
 			"minzoom": 10,
 			"filter": [

@@ -15,11 +15,8 @@
         "MAXAR_KYIV": {
             "mbtiles": "kiev.mbtiles"
         },
-        "HILLSHADE_2016": {
+        "HILLSHADE": {
             "mbtiles": "hillshade3395.mbtiles"
-        },
-        "DAM": {
-                "mbtiles": "dam.mbtiles"
         },
         "LANDCOVER": {
                 "mbtiles": "landcover.mbtiles"
