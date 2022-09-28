@@ -12,7 +12,8 @@ Example Attribution: `<a href=\\\"https://www.agc.army.mil\\\" target=\\\"_blank
 
 The Army Geospatial Center (AGC) Releasable Basemap Tiles (RBT) use the following font families:
 
-- Arial Unicode MS, digitized data (c) 1993-2000 Agfa Monotype Corporation. All rights reserved.
+- Open Sans, digitized data(c) 2010-2011, Google Corporation. Open Sans is licensed under the Apache License, Version 2.0. You may obtain a copy of the license at http://www.apache.org/licenses/LICENSE-2.0.
+
 - NGATopo True Type,  shall belong to the US Government and shall allow for unrestricted use by the National Geospatial-Intelligence Agency (NGA) https://www.nga.mil/ and its commercial, academic, other U.S. Government, and foreign government partners.
 
 All SVG and PNG icons also known as sprites in this repository used by the Army Geospatial Center (AGC) Releasable Basemap Tiles (RBT) Styles are licensed under the Creative Commons Attribution-ShareAlike 4.0 International license. To view a copy of the license, visit https://creativecommons.org/licenses/by-sa/4.0/. Attribution need not be provided on map images, but should be reasonably accessable from maps based on on these styles (for example, in a webpage linked from copyright notice on the map).
