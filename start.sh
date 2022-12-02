@@ -6,7 +6,6 @@ docker rm rbt-tileserver-gl
 
 docker run -d \
 	--name rbt-tileserver-gl \
-	--network host \
 	--restart=always \
 	-v $(pwd)/fonts:/fonts \
 	-v $(pwd)/data:/data \
