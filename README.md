@@ -6,3 +6,8 @@ The RBT prototype is funded by [NGA](https://www.nga.mil/) and development, demo
 
 ### Deploying with [MapLibre TileserverGL](https://github.com/acalcutt/tileserver-gl#maplibre-tileserver-gl)
 The RBT prototype is deployed as a containerized application using a modified version of [TileserverGL](https://github.com/maptiler/tileserver-gl), that uses [MapLibre](https://maplibre.org/) instead of [MapboxGL](https://www.mapbox.com/mapbox-gljs). The `start.sh` script is an easy way to deploy the current config, styles, data, and fonts within this repo. Just clone this repo to any linux or Windows WSL system with Docker installed, and run `./start.sh` within the root directory.
+```
+git clone https://github.com/agcgeoint/rbt.git
+cd rbt
+./start.sh
+```
