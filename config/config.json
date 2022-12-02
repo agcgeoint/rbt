@@ -6,21 +6,29 @@
             "mbtiles": "../data",
             "styles": "../styles"
         },
+	"serveStaticMaps": true,
+	"formatQuality": {
+		"jpeg": 100,
+		"webp": 100,
+		"png": 100
+	},
+	"maxScaleFactor": 4,
+	"maxSize": 8192,
+	"minRendererPoolSizes": [16,8,4],
+	"maxRendererPoolSizes": [16,8,4],
+	"pbfAlias": "pbf",
         "serveAllFonts": true
     },
     "data": {
         "RBT": {
-            "mbtiles": "rbt.mbtiles"
-        },
-        "MAXAR_KYIV": {
-            "mbtiles": "kiev.mbtiles"
+            "mbtiles": "rbt_liechtenstein.mbtiles"
         },
         "HILLSHADE": {
-            "mbtiles": "hillshade3395.mbtiles"
+            "mbtiles": "hillshade_liechtenstein.mbtiles"
         },
-        "LANDCOVER": {
-                "mbtiles": "landcover.mbtiles"
-        }
+	"LANDCOVER": {
+		"mbtiles": "landcover_liechtenstein.mbtiles"
+	}
     },
     "styles": {
         "RBT-TPC-3395": {
@@ -31,7 +39,7 @@
                 "format": "png",
                 "bounds": [
                     -180,
-                    -84,
+                    -80,
                     180,
                     84
                 ]
@@ -45,21 +53,7 @@
                 "format": "png",
                 "bounds": [
                     -180,
-                    -84,
-                    180,
-                    84
-                ]
-            }
-        },
-        "RBT-JOG-SATELLITE-3395": {
-            "style": "RBT-JOG-SATELLITE-3395/style.json",
-            "serve_data": true,
-            "serve_rendered": true,
-            "tilejson": {
-                "format": "png",
-                "bounds": [
-                    -180,
-                    -84,
+                    -80,
                     180,
                     84
                 ]
@@ -73,21 +67,7 @@
                 "format": "png",
                 "bounds": [
                     -180,
-                    -84,
-                    180,
-                    84
-                ]
-            }
-        },
-        "RBT-TLM-SATELLITE-3395": {
-            "style": "RBT-TLM-SATELLITE-3395/style.json",
-            "serve_data": true,
-            "serve_rendered": true,
-            "tilejson": {
-                "format": "png",
-                "bounds": [
-                    -180,
-                    -84,
+                    -80,
                     180,
                     84
                 ]

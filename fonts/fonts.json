@@ -1,4 +1,4 @@
-[
+[	
     "NGATopo_barcode",
     "NGATopo_bi",
     "NGATopo_bld",
@@ -8,5 +8,15 @@
     "NGATopo_ita",
     "NGATopo_LtCn_ita",
     "NGATopo_LtCn_reg",
-    "NGATopo_reg"
+    "NGATopo_reg",
+    "Open Sans Bold Italic",
+    "Open Sans Bold",
+    "Open Sans Extra Bold Italic",
+    "Open Sans Extra Bold",
+    "Open Sans Italic",
+    "Open Sans Light Italic",
+    "Open Sans Light",
+    "Open Sans Regular",
+    "Open Sans Semibold Italic",
+    "Open Sans Semibold"
 ]
