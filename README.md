@@ -4,8 +4,8 @@ The [AGC](https://www.agc.army.mil/) Releasable Basemap Tiles (RBT) prototype is
 
 The RBT prototype is funded by [NGA](https://www.nga.mil/) and development, demonstration and enhancement will continue with the help of the Army Geospatial Enterprise [AGE](https://www.agc.army.mil/Army-Geospatial-Enterprise/About/) community, [GDIT](https://www.gdit.com), and [Axis Maps](https://www.axismaps.com/).
 
-## Deploying with [MapLibre TileserverGL](https://github.com/acalcutt/tileserver-gl#maplibre-tileserver-gl)
-The RBT prototype is deployed as a containerized application using a modified version of [TileserverGL](https://github.com/maptiler/tileserver-gl), that uses [MapLibre](https://maplibre.org/) instead of [MapboxGL](https://www.mapbox.com/mapbox-gljs). The `start.sh` script is an easy way to deploy the current config, styles, data, and fonts within this repo. Just clone this repo with [Git](https://git-scm.com/) to any linux or Windows WSL system with [Docker](https://docs.docker.com/get-docker/) installed, and run `./start.sh` within the root directory.
+## Deploying with [TileserverGL](https://github.com/acalcutt/tileserver-gl#maplibre-tileserver-gl)
+The RBT prototype is deployed as a containerized application using a modified version of [TileserverGL]([https://github.com/maptiler/tileserver-gl](https://hub.docker.com/repository/registry-1.docker.io/mjj203/rbt/tags?page=1&ordering=last_updated), that uses [MapLibre](https://maplibre.org/) instead of [MapboxGL](https://www.mapbox.com/mapbox-gljs), and enables EPSG:3395 projections for both WMTS and TileJSON endpoints. The `start.sh` script is an easy way to deploy the current config, styles, data, and fonts within this repo. Just clone this repo with [Git](https://git-scm.com/) to any linux or Windows WSL system with [Docker](https://www.docker.com/) installed, and run `./start.sh` within the root directory.
 
 ```
 git clone https://github.com/agcgeoint/rbt.git
@@ -14,3 +14,10 @@ cd rbt
 ```
 
 ### Setup Environment
+Before cloning this repo you will need to ensure [Git](https://git-scm.com/downloads), [Git Large File Storage (LFS)](https://git-lfs.github.com/), and [Docker](https://docs.docker.com/get-docker/) are installed and enabled on your system. 
+
+#### Install Git
+Download and install [Git](https://git-scm.com/downloads) and [LFS](https://github.com/git-lfs/git-lfs/releases/tag/v3.3.0) for your OS. For Windows just download the [Git Windows Installer](https://github.com/git-for-windows/git/releases/download/v2.38.1.windows.1/Git-2.38.1-64-bit.exe) and [LFS Windows Installer](https://github.com/git-lfs/git-lfs/releases/download/v3.3.0/git-lfs-windows-v3.3.0.exe), then double click each starting with Git to run through the installation. Then open your Git Bash or Git Cmd terminal and execute `git lfs install`.
+
+#### Install Docker
+Download and install [Docker](https://docs.docker.com/get-docker/) for your OS. For windows ensure [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/) is installed by following [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) for the latest Windows 10/11 or [Manual WSL](https://learn.microsoft.com/en-us/windows/wsl/install-manual) for older versions. Once WSL is enabled, then follow the [Windows install directions](https://docs.docker.com/desktop/install/windows-install/) and download the [installer](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe).
