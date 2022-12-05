@@ -13,7 +13,7 @@ Example Attribution: `<a href=\\\"https://www.agc.army.mil\\\" target=\\\"_blank
 The Army Geospatial Center (AGC) Releasable Basemap Tiles (RBT) use the following font families:
 
 
-- Open Sans, digitized data(c) 2010-2011, Google Corporation. Open Sans is licensed under the Apache License, Version 2.0. You may obtain a copy of the license at http://www.apache.org/licenses/LICENSE-2.0.
+-  Open Sans, digitized data(c) 2010-2011, Google Corporation. Open Sans is licensed under the Apache License, Version 2.0. You may obtain a copy of the license at http://www.apache.org/licenses/LICENSE-2.0.
 
 
 - NGATopo True Type,  shall belong to the US Government and shall allow for unrestricted use by the National Geospatial-Intelligence Agency (NGA) https://www.nga.mil/ and its commercial, academic, other U.S. Government, and foreign government partners.

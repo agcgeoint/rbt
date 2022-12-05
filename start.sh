@@ -1,15 +1,10 @@
 #!/usr/bin/env bash
 
-
 docker stop rbt-tileserver-gl
 docker rm rbt-tileserver-gl
 
 docker run -d \
 	--name rbt-tileserver-gl \
-<<<<<<< HEAD
-=======
-	--network host \
->>>>>>> 48d53c9 (add new test data and update style sheets)
 	--restart=always \
 	-v $(pwd)/fonts:/fonts \
 	-v $(pwd)/data:/data \
