@@ -21,13 +21,13 @@
     },
     "data": {
         "RBT": {
-            "mbtiles": "rbt.mbtiles"
+		"mbtiles": "rbt_europe.mbtiles"
         },
         "HILLSHADE": {
-            "mbtiles": "hillshade.mbtiles"
+		"mbtiles": "hillshade_europe.mbtiles"
         },
 	"LANDCOVER": {
-		"mbtiles": "landcover.mbtiles"
+		"mbtiles": "landcover_europe.mbtiles"
 	}
     },
     "styles": {
