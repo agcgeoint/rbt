@@ -1,24 +1,24 @@
 {
     "version": 8,
     "name": "RBT-TPC-3395",
-    "owner": {
-        "owner:name": "Army Geospatial Center",
-        "owner:website": "https://www.agc.army.mil/"
-    },
-    "metadata": {
-        "license:info": {
-            "data:licence": "© OpenStreetMap contributor https://www.openstreetmap.org/copyright",
-            "style:license": {
-                "licensing:disclaimer": "The visual design features of this style's layers including the sprite icons are licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.",
-                "licensing:url": "https://creativecommons.org/licenses/by-sa/4.0/",
-                "licensing:attribution": "Products or services using maps derived from this style's layers property or sprite icons need to visibly credit 'agc.army.mil' or reference 'ArmyGeospatialCenter' with a link to https://www.agc.army.mil/."
-            }
-        },
-        "creators:info": {
-            "creators:name": "Team GDIT",
-            "creators:websites": "https://www.gdit.com/ & https://www.axismaps.com/"
-        }
-    },
+	"owner": {
+		"owner:name": "Army Geospatial Center",
+		"owner:website": "https://www.agc.army.mil/"
+	},
+	"metadata": {
+		"license:info": {
+			"data:licence": "© OpenStreetMap contributor https://www.openstreetmap.org/copyright",
+			"style:license": {
+				"licensing:disclaimer": "The visual design features of this style's layers including the sprite icons are licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.",
+				"licensing:url": "https://creativecommons.org/licenses/by-sa/4.0/",
+				"licensing:attribution": "Products or services using maps derived from this style's layers property or sprite icons need to visibly credit 'agc.army.mil' or reference 'ArmyGeospatialCenter' with a link to https://www.agc.army.mil/."
+			}
+		},
+		"creators:info": {
+			"creators:name": "Team GDIT",
+			"creators:websites": "https://www.gdit.com/ & https://www.axismaps.com/"
+		}
+	},
     "sources": {
         "RBT": {
             "url": "mbtiles://{RBT}",
@@ -57,6 +57,12 @@
             ],
             "paint": {
                 "fill-color": "rgba(255,255,255,1)"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Glacier",
+                    "feature:code": "BJ030"
+                }
             }
         },
         {
@@ -72,6 +78,12 @@
             ],
             "paint": {
                 "fill-pattern": "glacier-level1"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Glacier",
+                    "feature:code": "BJ030"
+                }
             }
         },
         {
@@ -82,6 +94,12 @@
             "minzoom": 8,
             "paint": {
                 "fill-color": "rgba(255,255,255,0.8)"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Glacier",
+                    "feature:code": "BJ030"
+                }
             }
         },
         {
@@ -92,6 +110,12 @@
             "minzoom": 8,
             "paint": {
                 "fill-pattern": "glacier-level2"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Glacier",
+                    "feature:code": "BJ030"
+                }
             }
         },
         {
@@ -122,6 +146,47 @@
                     18,
                     1.2
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Glacier",
+                    "feature:code": "BJ030"
+                }
+            }
+        },
+        {
+            "id": "builtUpArea--level1",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "ne_builtup_area",
+            "minzoom": 3,
+            "maxzoom": 8,
+            "paint": {
+                "fill-color": "rgba(255,221,22,0.8)",
+                "fill-outline-color": "rgba(153,153,153,0.5)"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Built Up Area",
+                    "feature:code": "AL020"
+                }
+            }
+        },
+        {
+            "id": "builtUpArea--level2",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "osm_builtup_area",
+            "minzoom": 8,
+            "paint": {
+                "fill-color": "rgba(255,221,22,0.8)",
+                "fill-outline-color": "rgba(153,153,153,0.5)"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Built Up Area",
+                    "feature:code": "AL020"
+                }
             }
         },
         {
@@ -132,6 +197,12 @@
             "minzoom": 8,
             "paint": {
                 "fill-pattern": "marsh-level1"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Marsh",
+                    "feature:code": "ED010"
+                }
             }
         },
         {
@@ -147,6 +218,12 @@
                     2
                 ],
                 "line-width": 1
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Marsh",
+                    "feature:code": "ED010"
+                }
             }
         },
         {
@@ -157,6 +234,12 @@
             "minzoom": 8,
             "paint": {
                 "fill-pattern": "swamp-other-level1"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Swamp",
+                    "feature:code": "ED020"
+                }
             }
         },
         {
@@ -172,6 +255,12 @@
                     2
                 ],
                 "line-width": 1
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Swamp",
+                    "feature:code": "ED020"
+                }
             }
         },
         {
@@ -181,6 +270,12 @@
             "source-layer": "park",
             "paint": {
                 "fill-color": "rgba(200,224,217,1)"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Park",
+                    "feature:code": "AK120"
+                }
             }
         },
         {
@@ -210,10 +305,16 @@
                     18,
                     1
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Park",
+                    "feature:code": "AK120"
+                }
             }
         },
         {
-            "id": "hillshade",
+            "id": "shadedRelief",
             "type": "raster",
             "source": "HILLSHADE",
             "paint": {
@@ -233,230 +334,7 @@
             }
         },
         {
-            "id": "river--perennial--level1",
-            "type": "line",
-            "source": "RBT",
-            "source-layer": "river",
-            "minzoom": 5,
-            "maxzoom": 8,
-            "paint": {
-                "line-color": "rgba(0,160,223,1)",
-                "line-width": 0.3
-            }
-        },
-        {
-            "id": "river--perennial--level2",
-            "type": "line",
-            "source": "RBT",
-            "source-layer": "waterway",
-            "minzoom": 8,
-            "filter": [
-                "all",
-                [
-                    "match",
-                    [
-                        "get",
-                        "subclass"
-                    ],
-                    "river",
-                    true,
-                    "stream",
-                    true,
-                    false
-                ],
-                [
-                    "case",
-                    [
-                        "boolean",
-                        [
-                            "get",
-                            "intermittent"
-                        ],
-                        false
-                    ],
-                    false,
-                    true
-                ],
-                [
-                    "step",
-                    [
-                        "zoom"
-                    ],
-                    [
-                        "has",
-                        "name"
-                    ],
-                    12,
-                    true
-                ]
-            ],
-            "paint": {
-                "line-color": "rgba(0,160,223,1)",
-                "line-width": [
-                    "interpolate",
-                    [
-                        "exponential",
-                        1.3
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    8,
-                    0.3,
-                    10,
-                    0.6,
-                    18,
-                    1.2
-                ]
-            }
-        },
-        {
-            "id": "ocean--level1",
-            "type": "fill",
-            "source": "LANDCOVER",
-            "source-layer": "ocean_ne",
-            "maxzoom": 8,
-            "paint": {
-                "fill-color": "rgba(158,210,241,1)"
-            }
-        },
-        {
-            "id": "lakes--level1",
-            "type": "fill",
-            "source": "LANDCOVER",
-            "source-layer": "water_ne",
-            "maxzoom": 8,
-            "paint": {
-                "fill-color": "rgba(158,210,241,1)"
-            }
-        },
-        {
-            "id": "water--level2",
-            "type": "fill",
-            "source": "LANDCOVER",
-            "source-layer": "osm_water",
-            "minzoom": 8,
-            "paint": {
-                "fill-color": "rgba(158,210,241,1)",
-                "fill-outline-color": [
-                    "step",
-                    [
-                        "zoom"
-                    ],
-                    "rgba(0,160,223,0)",
-                    10,
-                    "rgba(0,160,223,1)"
-                ]
-            }
-        },
-        {
-            "id": "water--level2--intermittent--pattern",
-            "type": "fill",
-            "source": "LANDCOVER",
-            "source-layer": "inland_water_intermittent",
-            "minzoom": 8,
-            "paint": {
-                "fill-pattern": "dry-drainage-level1"
-            }
-        },
-        {
-            "id": "water--level2--intermittent--line",
-            "type": "line",
-            "source": "LANDCOVER",
-            "source-layer": "inland_water_intermittent",
-            "minzoom": 10,
-            "paint": {
-                "line-color": "rgba(0,160,223,1)",
-                "line-dasharray": [
-                    12,
-                    3
-                ],
-                "line-width": [
-                    "interpolate",
-                    [
-                        "exponential",
-                        1.3
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    10,
-                    0.2,
-                    18,
-                    1.2
-                ]
-            }
-        },
-        {
-            "id": "iceShelf--fill--level1",
-            "type": "fill",
-            "source": "LANDCOVER",
-            "source-layer": "ne_glacier_iceshelf",
-            "maxzoom": 8,
-            "filter": [
-                "in",
-                "featurecla",
-                "Antarctic Ice Shelf"
-            ],
-            "layout": {
-                "visibility": "visible"
-            },
-            "paint": {
-                "fill-color": "rgba(255,255,255,1)"
-            }
-        },
-        {
-            "id": "iceShelf--fill--pattern--level1",
-            "type": "fill",
-            "source": "LANDCOVER",
-            "source-layer": "ne_glacier_iceshelf",
-            "maxzoom": 8,
-            "filter": [
-                "in",
-                "featurecla",
-                "Antarctic Ice Shelf"
-            ],
-            "paint": {
-                "fill-pattern": "glacier-level1"
-            }
-        },
-        {
-            "id": "builtUpArea--level1",
-            "type": "fill",
-            "source": "LANDCOVER",
-            "source-layer": "ne_builtup_area",
-            "minzoom": 3,
-            "maxzoom": 8,
-            "paint": {
-                "fill-color": "rgba(255,221,22,0.8)",
-                "fill-outline-color": "rgba(153,153,153,0.5)"
-            }
-        },
-        {
-            "id": "builtUpArea--level2",
-            "type": "fill",
-            "source": "LANDCOVER",
-            "source-layer": "osm_builtup_area",
-            "minzoom": 8,
-            "paint": {
-                "fill-color": "rgba(255,221,22,0.8)",
-                "fill-outline-color": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    9,
-                    "rgba(153,153,153,0.5)",
-                    10,
-                    "rgba(153,153,153,1)"
-                ]
-            }
-        },
-        {
-            "id": "contour",
+            "id": "elevationContour",
             "type": "line",
             "source": "RBT",
             "source-layer": "contour",
@@ -464,7 +342,7 @@
             "filter": [
                 "all",
                 [
-                    ">",
+                    "!=",
                     [
                         "get",
                         "elevation"
@@ -769,6 +647,248 @@
                         0.3
                     ]
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Elevation Contour",
+                    "feature:code": "CA010"
+                }
+            }
+        },
+        {
+            "id": "river--perennial--level1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "river",
+            "minzoom": 5,
+            "maxzoom": 8,
+            "paint": {
+                "line-color": "rgba(0,160,223,1)",
+                "line-width": 0.3
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "River",
+                    "feature:code": "BH140"
+                }
+            }
+        },
+        {
+            "id": "river--perennial--level2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "waterway",
+            "minzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "river",
+                    true,
+                    "stream",
+                    true,
+                    false
+                ],
+                [
+                    "case",
+                    [
+                        "boolean",
+                        [
+                            "get",
+                            "intermittent"
+                        ],
+                        false
+                    ],
+                    false,
+                    true
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "has",
+                        "name"
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(0,160,223,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.3,
+                    10,
+                    0.6,
+                    18,
+                    1.2
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "River",
+                    "feature:code": "BH140"
+                }
+            }
+        },
+        {
+            "id": "ocean--level1",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "ocean_ne",
+            "maxzoom": 8,
+            "paint": {
+                "fill-color": "rgba(158,210,241,1)"
+            }
+        },
+        {
+            "id": "inlandWaterbody--perennial--level1",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "water_ne",
+            "maxzoom": 8,
+            "paint": {
+                "fill-color": "rgba(158,210,241,1)"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Inland Waterbody",
+                    "feature:code": "BH082"
+                }
+            }
+        },
+        {
+            "id": "ocean--and--inlandWaterbody--perennial--level2",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "osm_water",
+            "minzoom": 8,
+            "paint": {
+                "fill-color": "rgba(158,210,241,1)",
+                "fill-outline-color": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    "rgba(0,160,223,0)",
+                    10,
+                    "rgba(0,160,223,1)"
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Inland Waterbody",
+                    "feature:code": "BH082"
+                }
+            }
+        },
+        {
+            "id": "inlandWaterbody--intermittent--pattern--level2",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "inland_water_intermittent",
+            "minzoom": 8,
+            "paint": {
+                "fill-pattern": "dry-drainage-level1"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Inland Waterbody",
+                    "feature:code": "BH082"
+                }
+            }
+        },
+        {
+            "id": "inlandWaterbody--intermittent--line--level2",
+            "type": "line",
+            "source": "LANDCOVER",
+            "source-layer": "inland_water_intermittent",
+            "minzoom": 10,
+            "paint": {
+                "line-color": "rgba(0,160,223,1)",
+                "line-dasharray": [
+                    12,
+                    3
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0.2,
+                    18,
+                    1.2
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Inland Waterbody",
+                    "feature:code": "BH082"
+                }
+            }
+        },
+        {
+            "id": "iceShelf--fill",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "ne_glacier_iceshelf",
+            "maxzoom": 8,
+            "filter": [
+                "in",
+                "featurecla",
+                "Antarctic Ice Shelf"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "rgba(255,255,255,1)"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Ice Shelf",
+                    "feature:code": "BJ065"
+                }
+            }
+        },
+        {
+            "id": "iceShelf--fill--pattern",
+            "type": "fill",
+            "source": "LANDCOVER",
+            "source-layer": "ne_glacier_iceshelf",
+            "maxzoom": 8,
+            "filter": [
+                "in",
+                "featurecla",
+                "Antarctic Ice Shelf"
+            ],
+            "paint": {
+                "fill-pattern": "glacier-level1"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Ice Shelf",
+                    "feature:code": "BJ065"
+                }
             }
         },
         {
@@ -812,117 +932,145 @@
                     16,
                     8
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Pipeline",
+                    "feature:code": "AQ113"
+                }
             }
         },
-		{
-			"id": "dam--surface--fill",
-			"type": "fill",
-			"source": "RBT",
-			"source-layer": "dam_surface",
-			"minzoom": 10,
-			"paint": {
-				"fill-color": "rgba(75,75,75,0.3)"
-			}
-		},
-		{
-			"id": "dam--surface--line",
-			"type": "line",
-			"source": "RBT",
-			"source-layer": "dam_surface",
-			"minzoom": 10,
-			"layout": {
-				"line-join": "round"
-			},
-			"paint": {
-				"line-color": "rgba(75,75,75,1)",
-				"line-width": [
-					"interpolate",
-					[
-						"exponential",
-						1.3
-					],
-					[
-						"zoom"
-					],
-					10,
-					1,
-					18,
-					8
-				]
-			}
-		},
-		{
-			"id": "dam--line",
-			"type": "line",
-			"source": "RBT",
-			"source-layer": "dam_curve",
-			"minzoom": 10,
-			"layout": {
-				"line-join": "round",
-				"visibility": "visible"
-			},
-			"paint": {
-				"line-color": "rgba(75,75,75,1)",
-				"line-width": [
-					"interpolate",
-					[
-						"exponential",
-						1.3
-					],
-					[
-						"zoom"
-					],
-					10,
-					1,
-					18,
-					8
-				]
-			}
-		},
-		{
-			"id": "dam--point",
-			"type": "circle",
-			"source": "RBT",
-			"source-layer": "dam_label",
-			"minzoom": 10,
-			"filter": [
-				"==",
-				"dam_srf_crv_intersect",
-				"N"
-			],
-			"paint": {
-				"circle-color": "rgba(75,75,75,0)",
-				"circle-radius": [
-					"interpolate",
-					[
-						"exponential",
-						1.3
-					],
-					[
-						"zoom"
-					],
-					10,
-					1.5,
-					16,
-					4
-				],
-				"circle-stroke-color": "rgba(75,75,75,1)",
-				"circle-stroke-width": [
-					"interpolate",
-					[
-						"exponential",
-						1.3
-					],
-					[
-						"zoom"
-					],
-					10,
-					1,
-					18,
-					4
-				]
-			}
-		},
+        {
+            "id": "dam--surface--fill",
+            "type": "fill",
+            "source": "RBT",
+            "source-layer": "dam_surface",
+            "minzoom": 10,
+            "paint": {
+                "fill-color": "rgba(75,75,75,0.3)"
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Dam",
+                    "feature:code": "BI202"
+                }
+            }
+        },
+        {
+            "id": "dam--surface--line",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "dam_surface",
+            "minzoom": 10,
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    18
+                ]
+            }
+        },
+        {
+            "id": "dam--line",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "dam_curve",
+            "minzoom": 10,
+            "layout": {
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    18
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Dam",
+                    "feature:code": "BI202"
+                }
+            }
+        },
+        {
+            "id": "dam--point",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "dam_label",
+            "minzoom": 10,
+            "filter": [
+                "==",
+                "dam_srf_crv_intersect",
+                "N"
+            ],
+            "layout": {
+                "icon-allow-overlap": true,
+                "icon-image": [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    "dam-hard",
+                    11,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "surface"
+                        ],
+                        "hard",
+                        "dam-hard",
+                        "dam-loose"
+                    ]
+                ],
+                "icon-rotate": -45,
+                "icon-size": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0.06,
+                    18,
+                    1
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Dam",
+                    "feature:code": "BI202"
+                }
+            }
+        },
         {
             "id": "militaryInstallation--line1",
             "type": "line",
@@ -949,6 +1097,12 @@
                     16,
                     8
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Military Installation",
+                    "feature:code": "SU001"
+                }
             }
         },
         {
@@ -981,6 +1135,12 @@
                     16,
                     1.2
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Military Installation",
+                    "feature:code": "SU001"
+                }
             }
         },
         {
@@ -1034,10 +1194,92 @@
                     16,
                     8
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Pipeline",
+                    "feature:code": "AQ113"
+                }
             }
         },
         {
-            "id": "railwaySidetrack--line",
+            "id": "tunnel--road",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "tunnel",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "motorway",
+                        "trunk",
+                        "primary",
+                        "secondary"
+                    ],
+                    true,
+                    false
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-dasharray": [
+                    4,
+                    2
+                ],
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    12
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    2
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Tunnel",
+                    "feature:code": "AQ130"
+                }
+            }
+        },
+        {
+            "id": "tunnel--railwaySidetrack",
             "type": "line",
             "source": "RBT",
             "source-layer": "railway",
@@ -1069,8 +1311,6 @@
                         ],
                         "yard",
                         false,
-                        "siding",
-                        false,
                         true
                     ],
                     [
@@ -1083,7 +1323,19 @@
                         false,
                         "disused",
                         false,
+                        "subway",
+                        false,
                         true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "tunnel",
+                        true,
+                        false
                     ]
                 ],
                 13,
@@ -1111,12 +1363,31 @@
                         false,
                         "disused",
                         false,
+                        "subway",
+                        false,
                         true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "tunnel",
+                        true,
+                        false
                     ]
                 ]
             ],
+            "layout": {
+                "visibility": "visible"
+            },
             "paint": {
                 "line-color": "rgba(75,75,75,1)",
+                "line-dasharray": [
+                    8,
+                    4
+                ],
                 "line-width": [
                     "interpolate",
                     [
@@ -1126,83 +1397,81 @@
                     [
                         "zoom"
                     ],
-                    10,
+                    8,
                     0.5,
+                    10,
+                    1,
                     18,
                     1
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Tunnel",
+                    "feature:code": "AQ130"
+                }
             }
         },
         {
-            "id": "railwaySidetrack--pattern",
+            "id": "tunnel--railway",
             "type": "line",
             "source": "RBT",
             "source-layer": "railway",
             "minzoom": 10,
-            "maxzoom": 11,
             "filter": [
                 "all",
                 [
-                    "in",
-                    "dps_type",
-                    "sidetrack_intact_broadstandard_nonelectrified",
-                    "sidetrack_intact_broadstandard_electrified"
-                ],
-                [
-                    "!in",
-                    "service",
-                    "yard",
-                    "siding"
-                ],
-                [
-                    "!in",
-                    "subclass",
-                    "abandoned",
-                    "disused"
-                ]
-            ],
-            "paint": {
-                "line-pattern": "railway-1track",
-                "line-width": [
-                    "interpolate",
+                    "match",
                     [
-                        "linear"
+                        "get",
+                        "dps_type"
                     ],
-                    [
-                        "zoom"
-                    ],
-                    8,
-                    5,
-                    11,
-                    6
-                ]
-            }
-        },
-        {
-            "id": "railway--line",
-            "type": "line",
-            "source": "RBT",
-            "source-layer": "railway",
-            "minzoom": 8,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "dps_type",
                     "railway_intact_broadstandard_nonelectrified_singletrack",
+                    true,
                     "railway_intact_broadstandard_electrified_singletrack",
+                    true,
                     "railway_intact_broadstandard_nonelectrified_multipletracks",
-                    "railway_intact_broadstandard_electrified_multipletracks"
+                    true,
+                    "railway_intact_broadstandard_electrified_multipletracks",
+                    true,
+                    false
                 ],
                 [
-                    "!in",
-                    "subclass",
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
                     "abandoned",
-                    "disused"
+                    false,
+                    "disused",
+                    false,
+                    "platform",
+                    false,
+                    "subway",
+                    false,
+                    true
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "tunnel",
+                    true,
+                    false
                 ]
             ],
+            "layout": {
+                "visibility": "visible"
+            },
             "paint": {
                 "line-color": "rgba(75,75,75,1)",
+                "line-dasharray": [
+                    4,
+                    2
+                ],
                 "line-width": [
                     "interpolate",
                     [
@@ -1219,82 +1488,167 @@
                     18,
                     2
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Tunnel",
+                    "feature:code": "AQ130"
+                }
             }
         },
         {
-            "id": "railway--1track--pattern",
+            "id": "road--2or3Lanes--line1",
             "type": "line",
             "source": "RBT",
-            "source-layer": "railway",
-            "minzoom": 8,
+            "source-layer": "osm_road",
+            "minzoom": 10,
             "filter": [
                 "all",
                 [
-                    "in",
-                    "dps_type",
-                    "railway_intact_broadstandard_nonelectrified_singletrack",
-                    "railway_intact_broadstandard_electrified_singletrack"
+                    "==",
+                    "subclass",
+                    "secondary"
                 ],
                 [
-                    "!in",
-                    "subclass",
-                    "abandoned",
-                    "disused"
+                    "!=",
+                    "brunnel",
+                    "tunnel"
                 ]
             ],
+            "layout": {
+                "line-cap": "round",
+                "visibility": "visible"
+            },
             "paint": {
-                "line-pattern": "railway-1track",
+                "line-color": "rgba(75,75,75,1)",
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    10
+                ],
                 "line-width": [
                     "interpolate",
                     [
-                        "linear"
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    0,
+                    13,
+                    0.5,
+                    18,
+                    3
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Road",
+                    "feature:code": "AP030"
+                }
+            }
+        },
+        {
+            "id": "road--4orMoreLanes--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 8,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "primary",
+                    true,
+                    false
+                ],
+                10,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "primary",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "tunnel",
+                        false,
+                        true
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
                     ],
                     [
                         "zoom"
                     ],
                     8,
-                    5,
-                    11,
-                    6
-                ]
-            }
-        },
-        {
-            "id": "railway--2orMoreTracks--pattern",
-            "type": "line",
-            "source": "RBT",
-            "source-layer": "railway",
-            "minzoom": 8,
-            "filter": [
-                "all",
-                [
-                    "in",
-                    "dps_type",
-                    "railway_intact_broadstandard_nonelectrified_multipletracks",
-                    "railway_intact_broadstandard_electrified_multipletracks"
+                    0.75,
+                    10,
+                    1.5,
+                    18,
+                    12
                 ],
-                [
-                    "!in",
-                    "subclass",
-                    "abandoned",
-                    "disused"
-                ]
-            ],
-            "paint": {
-                "line-pattern": "railway-2orMoreTracks",
                 "line-width": [
                     "interpolate",
                     [
-                        "linear"
+                        "exponential",
+                        1.3
                     ],
                     [
                         "zoom"
                     ],
-                    8,
-                    5,
+                    10,
+                    0,
                     11,
-                    6
+                    0.5,
+                    18,
+                    3
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Road",
+                    "feature:code": "AP030"
+                }
             }
         },
         {
@@ -1304,10 +1658,50 @@
             "source-layer": "osm_road",
             "minzoom": 8,
             "filter": [
-                "in",
-                "subclass",
-                "motorway",
-                "trunk"
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "motorway",
+                        "trunk"
+                    ],
+                    true,
+                    false
+                ],
+                10,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        [
+                            "motorway",
+                            "trunk"
+                        ],
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "tunnel",
+                        false,
+                        true
+                    ]
+                ]
             ],
             "layout": {
                 "line-cap": "round",
@@ -1350,18 +1744,32 @@
                     18,
                     3
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Road",
+                    "feature:code": "AP030"
+                }
             }
         },
         {
-            "id": "road--notDivided--1or2Lanes",
+            "id": "road--2or3Lanes--line2",
             "type": "line",
             "source": "RBT",
             "source-layer": "osm_road",
             "minzoom": 10,
             "filter": [
-                "==",
-                "subclass",
-                "secondary"
+                "all",
+                [
+                    "==",
+                    "subclass",
+                    "secondary"
+                ],
+                [
+                    "!=",
+                    "brunnel",
+                    "tunnel"
+                ]
             ],
             "layout": {
                 "line-cap": "round",
@@ -1383,18 +1791,59 @@
                     18,
                     10
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Road",
+                    "feature:code": "AP030"
+                }
             }
         },
         {
-            "id": "road--notDivided--moreThan2Lanes",
+            "id": "road--4orMoreLanes--line2",
             "type": "line",
             "source": "RBT",
             "source-layer": "osm_road",
             "minzoom": 8,
             "filter": [
-                "==",
-                "subclass",
-                "primary"
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "primary",
+                    true,
+                    false
+                ],
+                10,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "primary",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "tunnel",
+                        false,
+                        true
+                    ]
+                ]
             ],
             "layout": {
                 "line-cap": "round",
@@ -1418,6 +1867,12 @@
                     18,
                     12
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Road",
+                    "feature:code": "AP030"
+                }
             }
         },
         {
@@ -1425,11 +1880,52 @@
             "type": "line",
             "source": "RBT",
             "source-layer": "osm_road",
+            "minzoom": 6,
             "filter": [
-                "in",
-                "subclass",
-                "motorway",
-                "trunk"
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "motorway",
+                        "trunk"
+                    ],
+                    true,
+                    false
+                ],
+                10,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        [
+                            "motorway",
+                            "trunk"
+                        ],
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "tunnel",
+                        false,
+                        true
+                    ]
+                ]
             ],
             "layout": {
                 "line-cap": "round",
@@ -1454,6 +1950,12 @@
                     18,
                     20
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Road",
+                    "feature:code": "AP030"
+                }
             }
         },
         {
@@ -1461,14 +1963,120 @@
             "type": "line",
             "source": "RBT",
             "source-layer": "osm_road",
+            "minzoom": 11,
             "filter": [
-                "in",
-                "subclass",
-                "motorway",
-                "trunk"
+                "all",
+                [
+                    "in",
+                    "subclass",
+                    "motorway",
+                    "trunk"
+                ],
+                [
+                    "!=",
+                    "brunnel",
+                    "tunnel"
+                ]
             ],
             "layout": {
-                "line-cap": "round"
+                "line-cap": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0,
+                    10,
+                    0.7,
+                    18,
+                    3
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    0,
+                    18,
+                    1.5
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Road",
+                    "feature:code": "AP030"
+                }
+            }
+        },
+        {
+            "id": "road--divided--line4",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 9,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "motorway",
+                        "trunk"
+                    ],
+                    true,
+                    false
+                ],
+                10,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        [
+                            "motorway",
+                            "trunk"
+                        ],
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "tunnel",
+                        false,
+                        true
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "visibility": "visible"
             },
             "paint": {
                 "line-color": "rgba(255,255,255,1)",
@@ -1488,6 +2096,1743 @@
                     18,
                     3
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Road",
+                    "feature:code": "AP030"
+                }
+            }
+        },
+        {
+            "id": "railwaySidetrack--line",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "sidetrack_intact_broadstandard_nonelectrified",
+                        true,
+                        "sidetrack_intact_broadstandard_electrified",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "service"
+                        ],
+                        "yard",
+                        false,
+                        true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "abandoned",
+                        false,
+                        "disused",
+                        false,
+                        "subway",
+                        false,
+                        true
+                    ],
+                    [
+                        "!",
+                        [
+                            "has",
+                            "brunnel"
+                        ]
+                    ]
+                ],
+                13,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "sidetrack_intact_broadstandard_nonelectrified",
+                        true,
+                        "sidetrack_intact_broadstandard_electrified",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "abandoned",
+                        false,
+                        "disused",
+                        false,
+                        "subway",
+                        false,
+                        true
+                    ],
+                    [
+                        "!",
+                        [
+                            "has",
+                            "brunnel"
+                        ]
+                    ]
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0.5,
+                    18,
+                    1
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Railway Sidetrack",
+                    "feature:code": "AN050"
+                }
+            }
+        },
+        {
+            "id": "railwaySidetrack--pattern",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "sidetrack_intact_broadstandard_nonelectrified",
+                        true,
+                        "sidetrack_intact_broadstandard_electrified",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "service"
+                        ],
+                        "yard",
+                        false,
+                        true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "abandoned",
+                        false,
+                        "disused",
+                        false,
+                        "subway",
+                        false,
+                        true
+                    ],
+                    [
+                        "!",
+                        [
+                            "has",
+                            "brunnel"
+                        ]
+                    ]
+                ],
+                13,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "sidetrack_intact_broadstandard_nonelectrified",
+                        true,
+                        "sidetrack_intact_broadstandard_electrified",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "abandoned",
+                        false,
+                        "disused",
+                        false,
+                        "subway",
+                        false,
+                        true
+                    ],
+                    [
+                        "!",
+                        [
+                            "has",
+                            "brunnel"
+                        ]
+                    ]
+                ]
+            ],
+            "paint": {
+                "line-pattern": "railway-1track",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    5,
+                    11,
+                    6
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Railway Sidetrack",
+                    "feature:code": "AN050"
+                }
+            }
+        },
+        {
+            "id": "railway--line",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 8,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "railway_intact_broadstandard_nonelectrified_singletrack",
+                        true,
+                        "railway_intact_broadstandard_electrified_singletrack",
+                        true,
+                        "railway_intact_broadstandard_nonelectrified_multipletracks",
+                        true,
+                        "railway_intact_broadstandard_electrified_multipletracks",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        [
+                            "abandoned",
+                            "disused",
+                            "platform",
+                            "subway"
+                        ],
+                        false,
+                        true
+                    ]
+                ],
+                10,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "railway_intact_broadstandard_nonelectrified_singletrack",
+                        true,
+                        "railway_intact_broadstandard_electrified_singletrack",
+                        true,
+                        "railway_intact_broadstandard_nonelectrified_multipletracks",
+                        true,
+                        "railway_intact_broadstandard_electrified_multipletracks",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        [
+                            "abandoned",
+                            "disused",
+                            "platform",
+                            "subway"
+                        ],
+                        false,
+                        true
+                    ],
+                    [
+                        "!",
+                        [
+                            "has",
+                            "brunnel"
+                        ]
+                    ]
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.5,
+                    10,
+                    1,
+                    18,
+                    2
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Railway",
+                    "feature:code": "AN010"
+                }
+            }
+        },
+        {
+            "id": "railway--1track--pattern",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 8,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        [
+                            "railway_intact_broadstandard_nonelectrified_singletrack",
+                            "railway_intact_broadstandard_electrified_singletrack"
+                        ],
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        [
+                            "abandoned",
+                            "disused",
+                            "platform",
+                            "subway"
+                        ],
+                        false,
+                        true
+                    ]
+                ],
+                10,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        [
+                            "railway_intact_broadstandard_nonelectrified_singletrack",
+                            "railway_intact_broadstandard_electrified_singletrack"
+                        ],
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        [
+                            "abandoned",
+                            "disused",
+                            "platform",
+                            "subway"
+                        ],
+                        false,
+                        true
+                    ],
+                    [
+                        "!",
+                        [
+                            "has",
+                            "brunnel"
+                        ]
+                    ]
+                ]
+            ],
+            "paint": {
+                "line-pattern": "railway-1track",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    5,
+                    11,
+                    6
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Railway",
+                    "feature:code": "AN010"
+                }
+            }
+        },
+        {
+            "id": "railway--2orMoreTracks--pattern",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 8,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        [
+                            "railway_intact_broadstandard_nonelectrified_multipletracks",
+                            "railway_intact_broadstandard_electrified_multipletracks"
+                        ],
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        [
+                            "abandoned",
+                            "disused",
+                            "platform",
+                            "subway"
+                        ],
+                        false,
+                        true
+                    ]
+                ],
+                10,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        [
+                            "railway_intact_broadstandard_nonelectrified_multipletracks",
+                            "railway_intact_broadstandard_electrified_multipletracks"
+                        ],
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        [
+                            "abandoned",
+                            "disused",
+                            "platform",
+                            "subway"
+                        ],
+                        false,
+                        true
+                    ],
+                    [
+                        "!",
+                        [
+                            "has",
+                            "brunnel"
+                        ]
+                    ]
+                ]
+            ],
+            "paint": {
+                "line-pattern": "railway-2orMoreTracks",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    5,
+                    11,
+                    6
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Railway",
+                    "feature:code": "AN010"
+                }
+            }
+        },
+        {
+            "id": "bridge--railwaySidetrack--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "sidetrack_intact_broadstandard_nonelectrified",
+                        true,
+                        "sidetrack_intact_broadstandard_electrified",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "service"
+                        ],
+                        "yard",
+                        false,
+                        true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "abandoned",
+                        false,
+                        "disused",
+                        false,
+                        "subway",
+                        false,
+                        true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "bridge",
+                        true,
+                        false
+                    ]
+                ],
+                13,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "sidetrack_intact_broadstandard_nonelectrified",
+                        true,
+                        "sidetrack_intact_broadstandard_electrified",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "abandoned",
+                        false,
+                        "disused",
+                        false,
+                        "subway",
+                        false,
+                        true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "bridge",
+                        true,
+                        false
+                    ]
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0,
+                    18,
+                    6
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0.5,
+                    18,
+                    1
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--railwaySidetrack--line2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                [
+                    "zoom"
+                ],
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "sidetrack_intact_broadstandard_nonelectrified",
+                        true,
+                        "sidetrack_intact_broadstandard_electrified",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "service"
+                        ],
+                        "yard",
+                        false,
+                        true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "abandoned",
+                        false,
+                        "disused",
+                        false,
+                        "subway",
+                        false,
+                        true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "bridge",
+                        true,
+                        false
+                    ]
+                ],
+                13,
+                [
+                    "all",
+                    [
+                        "match",
+                        [
+                            "get",
+                            "dps_type"
+                        ],
+                        "sidetrack_intact_broadstandard_nonelectrified",
+                        true,
+                        "sidetrack_intact_broadstandard_electrified",
+                        true,
+                        false
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "subclass"
+                        ],
+                        "abandoned",
+                        false,
+                        "disused",
+                        false,
+                        "subway",
+                        false,
+                        true
+                    ],
+                    [
+                        "match",
+                        [
+                            "get",
+                            "brunnel"
+                        ],
+                        "bridge",
+                        true,
+                        false
+                    ]
+                ]
+            ],
+            "paint": {
+                "line-color": "rgba(194,151,165,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0.5,
+                    18,
+                    1
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--railway--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "dps_type"
+                    ],
+                    "railway_intact_broadstandard_nonelectrified_singletrack",
+                    true,
+                    "railway_intact_broadstandard_electrified_singletrack",
+                    true,
+                    "railway_intact_broadstandard_nonelectrified_multipletracks",
+                    true,
+                    "railway_intact_broadstandard_electrified_multipletracks",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "abandoned",
+                        "disused",
+                        "platform",
+                        "subway"
+                    ],
+                    false,
+                    true
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "bridge",
+                    true,
+                    false
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    12
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    2
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--railway--line2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "railway",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "dps_type"
+                    ],
+                    "railway_intact_broadstandard_nonelectrified_singletrack",
+                    true,
+                    "railway_intact_broadstandard_electrified_singletrack",
+                    true,
+                    "railway_intact_broadstandard_nonelectrified_multipletracks",
+                    true,
+                    "railway_intact_broadstandard_electrified_multipletracks",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "abandoned",
+                        "disused",
+                        "platform",
+                        "subway"
+                    ],
+                    false,
+                    true
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "bridge",
+                    true,
+                    false
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(194,151,165,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    2
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--2or3Lanes--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "secondary",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "bridge",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        400
+                    ],
+                    11,
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        200
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    10
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1,
+                    18,
+                    4
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--4orMoreLanes--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "primary",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "bridge",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        400
+                    ],
+                    11,
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        200
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.75,
+                    10,
+                    1.5,
+                    18,
+                    12
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1,
+                    18,
+                    4
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--divided--line1",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "motorway",
+                    true,
+                    "trunk",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "bridge",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        400
+                    ],
+                    11,
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        200
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    7,
+                    0.5,
+                    10,
+                    3,
+                    18,
+                    20
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1,
+                    18,
+                    4
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--2or3Lanes--line2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "secondary",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "bridge",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        400
+                    ],
+                    11,
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        200
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(194,151,165,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1,
+                    18,
+                    10
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--4orMoreLanes--line2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "primary",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "bridge",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        400
+                    ],
+                    11,
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        200
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(194,151,165,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0.75,
+                    10,
+                    1.5,
+                    18,
+                    12
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--divided--line2",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "motorway",
+                    true,
+                    "trunk",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "bridge",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        400
+                    ],
+                    11,
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        200
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(194,151,165,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    7,
+                    0.5,
+                    10,
+                    3,
+                    18,
+                    20
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--divided--line3",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "motorway",
+                    true,
+                    "trunk",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "bridge",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        400
+                    ],
+                    11,
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        200
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(75,75,75,1)",
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    8,
+                    0,
+                    10,
+                    0.7,
+                    18,
+                    3
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    0,
+                    18,
+                    1.5
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
+            }
+        },
+        {
+            "id": "bridge--divided--line4",
+            "type": "line",
+            "source": "RBT",
+            "source-layer": "osm_road",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "motorway",
+                    true,
+                    "trunk",
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "brunnel"
+                    ],
+                    "bridge",
+                    true,
+                    false
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        400
+                    ],
+                    11,
+                    [
+                        ">=",
+                        [
+                            "get",
+                            "geom_len"
+                        ],
+                        200
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "rgba(255,255,255,1)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.3
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    0,
+                    10,
+                    0.7,
+                    18,
+                    3
+                ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Bridge",
+                    "feature:code": "AQ040"
+                }
             }
         },
         {
@@ -1531,70 +3876,16 @@
                     16,
                     8
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Pipeline",
+                    "feature:code": "AQ113"
+                }
             }
         },
         {
-            "id": "cable--nonObstruction--other",
-            "type": "line",
-            "source": "RBT",
-            "source-layer": "powerline",
-            "minzoom": 10,
-            "filter": [
-                "any",
-                [
-                    "all",
-                    [
-                        "any",
-                        [
-                            "!has",
-                            "location"
-                        ],
-                        [
-                            "==",
-                            "location",
-                            "overhead"
-                        ]
-                    ],
-                    [
-                        "in",
-                        "usage",
-                        "Barrier",
-                        "Cableway",
-                        "Guide",
-                        "Load Bearing",
-                        "Restraining",
-                        "Towing"
-                    ]
-                ],
-                [
-                    "==",
-                    "location",
-                    "underground"
-                ]
-            ],
-            "paint": {
-                "line-color": "rgba(0,0,0,1)",
-                "line-dasharray": [
-                    16,
-                    4
-                ],
-                "line-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    10,
-                    0.5,
-                    16,
-                    1
-                ]
-            }
-        },
-        {
-            "id": "cable--nonObstruction--power",
+            "id": "cable--nonObstruction--powerTransmission",
             "type": "line",
             "source": "RBT",
             "source-layer": "powerline",
@@ -1614,33 +3905,14 @@
                     ]
                 ],
                 [
-                    "!in",
+                    "in",
                     "usage",
-                    "Barrier",
-                    "Cableway",
-                    "Guide",
-                    "Load Bearing",
-                    "Restraining",
-                    "Towing"
+                    "transmission",
+                    "Power Transmission Line"
                 ]
             ],
-            "layout": {
-                "visibility": "visible"
-            },
             "paint": {
-                "line-pattern": [
-                    "match",
-                    [
-                        "get",
-                        "usage"
-                    ],
-                    [
-                        "transmission",
-                        "Power Transmission Line"
-                    ],
-                    "cable-nonObstruction-powerTransmission",
-                    "cable-nonObstruction-communication-powerDistribution"
-                ],
+                "line-pattern": "cable-nonObstruction-powerTransmission",
                 "line-width": [
                     "interpolate",
                     [
@@ -1654,10 +3926,16 @@
                     16,
                     24
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Cable",
+                    "feature:code": "AT005"
+                }
             }
         },
         {
-            "id": "admin--firstOrder--line1",
+            "id": "adminSub--firstOrder--line1",
             "type": "line",
             "source": "RBT",
             "source-layer": "adm1_lines",
@@ -1696,10 +3974,16 @@
                     16,
                     8
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Administrative Subdivision",
+                    "feature:code": "FA003"
+                }
             }
         },
         {
-            "id": "admin--firstOrder--line2",
+            "id": "adminSub--firstOrder--line2",
             "type": "line",
             "source": "RBT",
             "source-layer": "adm1_lines",
@@ -1815,6 +4099,12 @@
                     16,
                     1.5
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Administrative Subdivision",
+                    "feature:code": "FA003"
+                }
             }
         },
         {
@@ -1864,6 +4154,12 @@
                     16,
                     16
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Administrative Boundary",
+                    "feature:code": "FA000"
+                }
             }
         },
         {
@@ -1908,6 +4204,12 @@
                     16,
                     2
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Administrative Boundary",
+                    "feature:code": "FA000"
+                }
             }
         },
         {
@@ -1955,6 +4257,12 @@
                     16,
                     16
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Administrative Boundary",
+                    "feature:code": "FA000"
+                }
             }
         },
         {
@@ -1997,10 +4305,16 @@
                     16,
                     2
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Administrative Boundary",
+                    "feature:code": "FA000"
+                }
             }
         },
         {
-            "id": "contour--label",
+            "id": "elevationContour--label",
             "type": "symbol",
             "source": "RBT",
             "source-layer": "contour",
@@ -2008,7 +4322,7 @@
             "filter": [
                 "all",
                 [
-                    ">",
+                    "!=",
                     [
                         "get",
                         "elevation"
@@ -2168,13 +4482,33 @@
                     [
                         "zoom"
                     ],
-                    10,
-                    11,
                     40,
                     12,
                     100
                 ],
-                "text-field": "{elevation}",
+                "text-field": [
+					"case",
+					[
+						"<",
+						[
+							"get",
+							"elevation"
+						],
+						0
+					],
+					[
+						"concat",
+						"MINUS",
+						[
+							"get",
+							"elevation"
+						]
+					],
+					[
+						"get",
+						"elevation"
+					]
+				],
                 "text-font": [
                     "NGATopo_Cn_ita"
                 ],
@@ -2207,162 +4541,193 @@
                 "text-halo-blur": 0,
                 "text-halo-color": "rgba(255,255,255,0.6)",
                 "text-halo-width": 1
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Elevation Contour",
+                    "feature:code": "CA010"
+                }
             }
         },
         {
-            "id": "water--label",
+            "id": "river--perennial--label--level2",
             "type": "symbol",
             "source": "RBT",
-            "source-layer": "geonames_hydrographic",
+            "source-layer": "waterway",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "river",
+                    true,
+                    "stream",
+                    true,
+                    false
+                ],
+                [
+                    "case",
+                    [
+                        "boolean",
+                        [
+                            "get",
+                            "intermittent"
+                        ],
+                        false
+                    ],
+                    false,
+                    true
+                ],
+                [
+                    "step",
+                    [
+                        "zoom"
+                    ],
+                    [
+                        "has",
+                        "name"
+                    ],
+                    12,
+                    true
+                ]
+            ],
+            "layout": {
+                "symbol-placement": "line",
+                "text-field": "{name}",
+                "text-font": [
+                    "NGATopo_Cn_ita",
+                    "Open Sans Italic"
+                ],
+                "text-letter-spacing": 0.05,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    12,
+                    16,
+                    14
+                ],
+                "text-transform": [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    "river",
+                    "uppercase",
+                    "none"
+                ]
+            },
+            "paint": {
+                "text-color": "rgba(0,160,223,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "River",
+                    "feature:code": "BH140"
+                }
+            }
+        },
+        {
+            "id": "water--label--level1",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "ne_water_label",
+            "minzoom": 0,
+            "maxzoom": 10,
             "filter": [
                 "step",
                 [
                     "zoom"
                 ],
                 [
-                    "all",
+                    "match",
                     [
-                        "==",
-                        [
-                            "get",
-                            "nt"
-                        ],
-                        "C"
+                        "get",
+                        "featurecla"
                     ],
-                    [
-                        "==",
-                        [
-                            "get",
-                            "dsg"
-                        ],
-                        "OCN"
-                    ]
+                    "ocean",
+                    true,
+                    false
                 ],
-                4,
+                3,
                 [
-                    "all",
+                    "match",
                     [
-                        "==",
-                        [
-                            "get",
-                            "nt"
-                        ],
-                        "C"
+                        "get",
+                        "featurecla"
                     ],
                     [
-                        "match",
-                        [
-                            "get",
-                            "dsg"
-                        ],
-                        "OCN",
-                        true,
-                        "SEA",
-                        true,
-                        false
-                    ]
+                        "ocean",
+                        "sea"
+                    ],
+                    true,
+                    false
                 ],
                 5,
                 [
-                    "all",
+                    "match",
                     [
-                        "==",
-                        [
-                            "get",
-                            "nt"
-                        ],
-                        "C"
+                        "get",
+                        "featurecla"
                     ],
                     [
-                        "match",
-                        [
-                            "get",
-                            "dsg"
-                        ],
-                        "OCN",
-                        true,
-                        "SEA",
-                        true,
-                        "GULF",
-                        true,
-                        false
-                    ]
+                        "ocean",
+                        "sea",
+                        "bay",
+                        "gulf",
+                        "Lake"
+                    ],
+                    true,
+                    false
                 ],
                 7,
-                [
-                    "all",
-                    [
-                        "==",
-                        [
-                            "get",
-                            "nt"
-                        ],
-                        "C"
-                    ],
-                    [
-                        "match",
-                        [
-                            "get",
-                            "dsg"
-                        ],
-                        "OCN",
-                        true,
-                        "SEA",
-                        true,
-                        "GULF",
-                        true,
-                        "CHN",
-                        true,
-                        "STRT",
-                        true,
-                        "BAY",
-                        true,
-                        "HBR",
-                        true,
-                        "LK",
-                        true,
-                        "LKS",
-                        true,
-                        false
-                    ]
-                ]
+                true
             ],
             "layout": {
-                "symbol-avoid-edges": true,
-                "text-field": "{full_name_ro}",
+                "text-field": "{name}",
                 "text-font": [
                     "NGATopo_Cn_ita",
-                    "Arial-Unicode-Italic"
+                    "Open Sans Italic"
                 ],
                 "text-letter-spacing": [
                     "step",
                     [
                         "zoom"
                     ],
-                    0.05,
-                    4,
                     [
                         "match",
                         [
                             "get",
-                            "dsg"
+                            "featurecla"
                         ],
-                        "OCN",
-                        0.2,
+                        "ocean",
+                        0.1,
                         0.05
                     ],
-                    8,
+                    5,
                     [
                         "match",
                         [
                             "get",
-                            "dsg"
+                            "featurecla"
                         ],
-                        [
-                            "OCN",
-                            "SEA"
-                        ],
+                        "ocean",
                         0.2,
+                        "sea",
+                        0.15,
                         0.05
                     ]
                 ],
@@ -2375,47 +4740,258 @@
                     [
                         "zoom"
                     ],
-                    2,
-                    12,
+                    0,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "featurecla"
+                        ],
+                        "sea",
+                        10,
+                        9
+                    ],
                     10,
                     [
                         "match",
                         [
                             "get",
-                            "dsg"
+                            "featurecla"
                         ],
-                        "OCN",
-                        30,
-                        "SEA",
-                        20,
-                        "GULF",
+                        [
+                            "ocean",
+                            "sea"
+                        ],
+                        18,
+                        [
+                            "gulf",
+                            "bay",
+                            "Lake"
+                        ],
                         16,
                         14
                     ]
+                ],
+                "text-transform": [
+                    "match",
+                    [
+                        "get",
+                        "featurecla"
+                    ],
+                    "ocean",
+                    "uppercase",
+                    "none"
                 ]
             },
             "paint": {
                 "text-color": "rgba(0,160,223,1)",
                 "text-halo-blur": 1,
-                "text-halo-color": [
-                    "match",
+                "text-halo-color": "rgba(158,210,241,1)",
+                "text-halo-width": 1
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Inland Waterbody",
+                    "feature:code": "BH082"
+                }
+            }
+        },
+        {
+            "id": "water--label--level2",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "geonames_hydrographic",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "==",
                     [
                         "get",
-                        "full_name_ro"
+                        "osm_intersect"
                     ],
-                    "Aral Sea",
-                    "rgba(240,236,233,1)",
-                    "rgba(158,210,241,1)"
+                    "Y"
                 ],
-                "text-halo-width": [
+                [
                     "step",
                     [
                         "zoom"
                     ],
-                    1,
-                    8,
-                    1.5
+                    [
+                        "all",
+                        [
+                            "match",
+                            [
+                                "get",
+                                "class"
+                            ],
+                            [
+                                "Bay",
+                                "Fjord",
+                                "Gulf",
+                                "Harbor",
+                                "Lagoon",
+                                "Lake",
+                                "Reservoir",
+                                "Sea",
+                                "Sound",
+                                "Strait"
+                            ],
+                            true,
+                            false
+                        ],
+                        [
+                            ">=",
+                            [
+                                "get",
+                                "area"
+                            ],
+                            10000000
+                        ]
+                    ],
+                    11,
+                    [
+                        "all",
+                        [
+                            "match",
+                            [
+                                "get",
+                                "class"
+                            ],
+                            [
+                                "Bay",
+                                "Fjord",
+                                "Gulf",
+                                "Harbor",
+                                "Lagoon",
+                                "Lake",
+                                "Reservoir",
+                                "Sea",
+                                "Sound",
+                                "Strait",
+                                "Canal",
+                                "Channel"
+                            ],
+                            true,
+                            false
+                        ],
+                        [
+                            ">=",
+                            [
+                                "get",
+                                "area"
+                            ],
+                            1000000
+                        ]
+                    ],
+                    13,
+                    true
                 ]
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "text-font": [
+                    "NGATopo_Cn_ita",
+                    "Open Sans Italic"
+                ],
+                "text-letter-spacing": [
+                    "match",
+                    [
+                        "get",
+                        "class"
+                    ],
+                    "Sea",
+                    0.15,
+                    0.05
+                ],
+                "text-max-width": 3,
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "class"
+                        ],
+                        "Sea",
+                        16,
+                        12
+                    ],
+                    16,
+                    14
+                ]
+            },
+            "paint": {
+                "text-color": "rgba(0,160,223,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Inland Waterbody",
+                    "feature:code": "BH082"
+                }
+            }
+        },
+        {
+            "id": "pipeline--label",
+            "type": "symbol",
+            "source": "RBT",
+            "source-layer": "pipeline",
+            "minzoom": 12,
+            "filter": [
+                "match",
+                [
+                    "get",
+                    "substance"
+                ],
+                [
+                    "Water",
+                    "water"
+                ],
+                false,
+                true
+            ],
+            "layout": {
+                "symbol-placement": "line",
+                "text-field": "{substance}",
+                "text-font": [
+                    "NGATopo_Cn_reg",
+                    "Open Sans Regular"
+                ],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    12,
+                    16,
+                    14
+                ]
+            },
+            "paint": {
+                "text-color": "rgba(0,0,0,1)",
+                "text-halo-blur": 1,
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1.5
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Pipeline",
+                    "feature:code": "AQ113"
+                }
             }
         },
         {
@@ -2553,6 +5129,12 @@
                 ],
                 "circle-stroke-color": "rgba(56,70,157,0.8)",
                 "circle-stroke-width": 2
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Land Aerodrome",
+                    "feature:code": "GB005"
+                }
             }
         },
         {
@@ -2698,483 +5280,728 @@
                     10,
                     18
                 ]
-            }
-        },
-        {
-            "id": "routeMarker--national--nonUSA",
-            "type": "symbol",
-            "source": "RBT",
-            "source-layer": "route_marker",
-            "minzoom": 9,
-            "filter": [
-                "all",
-                [
-                    "==",
-                    [
-                        "get",
-                        "subclass"
-                    ],
-                    "primary"
-                ],
-                [
-                    "==",
-                    [
-                        "get",
-                        "usa"
-                    ],
-                    0
-                ],
-                [
-                    "step",
-                    [
-                        "zoom"
-                    ],
-                    [
-                        "<=",
-                        [
-                            "get",
-                            "ref_len"
-                        ],
-                        6
-                    ],
-                    11,
-                    [
-                        "<=",
-                        [
-                            "get",
-                            "ref_len"
-                        ],
-                        10
-                    ]
-                ]
-            ],
-            "layout": {
-                "icon-image": "routeMarker-national-nonUSA",
-                "icon-rotation-alignment": "viewport",
-                "icon-text-fit": "both",
-                "icon-text-fit-padding": [
-                    -1,
-                    3,
-                    -2,
-                    3
-                ],
-                "symbol-placement": "line",
-                "symbol-spacing": 1000,
-                "text-field": "{ref}",
-                "text-font": [
-                    "NGATopo_Cn_reg",
-                    "Arial-Unicode-Regular"
-                ],
-                "text-letter-spacing": 0.05,
-                "text-rotation-alignment": "viewport",
-                "text-size": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    9,
-                    9,
-                    13,
-                    11
-                ],
-                "visibility": "visible"
             },
-            "paint": {
-                "text-color": "rgba(0,0,0,1)"
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Land Aerodrome",
+                    "feature:code": "GB005"
+                }
             }
         },
+		{
+			"id": "routeMarker--national--nonUSA",
+			"type": "symbol",
+			"source": "RBT",
+			"source-layer": "osm_road",
+			"minzoom": 12,
+			"filter": [
+				"all",
+				[
+					"has",
+					"ref"
+				],
+				[
+					"<=",
+					[
+						"get",
+						"ref_len"
+					],
+					5
+				],
+				[
+					"!",
+					[
+						"has",
+						"route_type"
+					]
+				],
+				[
+					"match",
+					[
+						"get",
+						"subclass"
+					],
+					"secondary",
+					true,
+					false
+				]
+			],
+			"layout": {
+				"icon-image": "routeMarker-national-nonUSA",
+				"icon-rotation-alignment": "viewport",
+				"icon-text-fit": "both",
+				"icon-text-fit-padding": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					10,
+					[
+						"literal",
+						[
+							-1,
+							1,
+							-2,
+							1
+						]
+					],
+					13,
+					[
+						"literal",
+						[
+							-1,
+							2,
+							-2,
+							2
+						]
+					]
+				],
+				"symbol-placement": "line",
+				"symbol-spacing": [
+					"step",
+					[
+						"zoom"
+					],
+					250,
+					15,
+					500
+				],
+				"text-field": "{ref}",
+				"text-font": [
+					"NGATopo_Cn_reg",
+					"Open Sans Regular"
+				],
+				"text-letter-spacing": 0.05,
+				"text-rotation-alignment": "viewport",
+				"text-size": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					9,
+					9,
+					13,
+					11
+				],
+				"visibility": "visible"
+			},
+			"paint": {
+				"text-color": "rgba(0,0,0,1)"
+			},
+			"metadata": {
+				"feature:info": {
+					"feature:name": "Road Route Marker",
+					"feature:code": "No Code"
+				}
+			}
+		},
+		{
+			"id": "routeMarker--nationalMotorway--nonUSA",
+			"type": "symbol",
+			"source": "RBT",
+			"source-layer": "osm_road",
+			"minzoom": 10,
+			"filter": [
+				"all",
+				[
+					"has",
+					"ref"
+				],
+				[
+					"<=",
+					"ref_len",
+					5
+				],
+				[
+					"in",
+					"subclass",
+					"trunk",
+					"primary"
+				],
+				[
+					"!has",
+					"route_type"
+				]
+			],
+			"layout": {
+				"icon-image": "routeMarker-nationalMotorway-nonUSA",
+				"icon-rotation-alignment": "viewport",
+				"icon-text-fit": "both",
+				"icon-text-fit-padding": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					8,
+					[
+						"literal",
+						[
+							-1,
+							1,
+							-2,
+							1
+						]
+					],
+					13,
+					[
+						"literal",
+						[
+							-1,
+							2,
+							-2,
+							2
+						]
+					]
+				],
+				"symbol-placement": "line",
+				"symbol-spacing": [
+					"step",
+					[
+						"zoom"
+					],
+					250,
+					11,
+					500
+				],
+				"text-field": "{ref}",
+				"text-font": [
+					"NGATopo_Cn_reg",
+					"Open Sans Regular"
+				],
+				"text-letter-spacing": 0.05,
+				"text-rotation-alignment": "viewport",
+				"text-size": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					9,
+					9,
+					13,
+					11
+				],
+				"visibility": "visible"
+			},
+			"paint": {
+				"text-color": "rgba(0,0,0,1)"
+			},
+			"metadata": {
+				"feature:info": {
+					"feature:name": "Road Route Marker",
+					"feature:code": "No Code"
+				}
+			}
+		},
+		{
+			"id": "routeMarker--international--nonUSA",
+			"type": "symbol",
+			"source": "RBT",
+			"source-layer": "osm_road",
+			"minzoom": 6,
+			"filter": [
+				"all",
+				[
+					"has",
+					"ref"
+				],
+				[
+					"<=",
+					"ref_len",
+					5
+				],
+				[
+					"==",
+					"subclass",
+					"motorway"
+				],
+				[
+					"!has",
+					"route_type"
+				]
+			],
+			"layout": {
+				"icon-image": "routeMarker-international",
+				"icon-rotation-alignment": "viewport",
+				"icon-text-fit": "both",
+				"icon-text-fit-padding": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					6,
+					[
+						"literal",
+						[
+							-1.5,
+							1,
+							-3,
+							1
+						]
+					],
+					13,
+					[
+						"literal",
+						[
+							-0.5,
+							4,
+							-2,
+							4
+						]
+					]
+				],
+				"symbol-placement": "line",
+				"symbol-spacing": [
+					"step",
+					[
+						"zoom"
+					],
+					250,
+					15,
+					500
+				],
+				"text-field": "{ref}",
+				"text-font": [
+					"NGATopo_Cn_reg",
+					"Open Sans Regular"
+				],
+				"text-letter-spacing": 0.05,
+				"text-rotation-alignment": "viewport",
+				"text-size": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					6,
+					9,
+					13,
+					11
+				],
+				"visibility": "visible"
+			},
+			"paint": {
+				"text-color": "rgba(0,0,0,1)"
+			},
+			"metadata": {
+				"feature:info": {
+					"feature:name": "Road Route Marker",
+					"feature:code": "No Code"
+				}
+			}
+		},
+		{
+			"id": "routeMarker--local--secondary--USA",
+			"type": "symbol",
+			"source": "RBT",
+			"source-layer": "osm_road",
+			"minzoom": 10,
+			"filter": [
+				"all",
+				[
+					"has",
+					"ref_number"
+				],
+				[
+				    "<=",
+				    [
+						"get",
+						"ref_number_len"
+				    ],
+				    5
+				],
+				[
+					"match",
+					[
+						"get",
+						"route_type"
+					],
+					"State Hwy",
+					true,
+					false
+				],
+				[
+					"match",
+					[
+						"get",
+						"subclass"
+					],
+					[
+						"motorway",
+						"trunk",
+						"primary",
+						"secondary"
+					],
+					true,
+					false
+				]
+			],
+			"layout": {
+				"icon-image": "routeMarker-local",
+				"icon-rotation-alignment": "viewport",
+				"icon-text-fit": "both",
+				"icon-text-fit-padding": [
+					-0.5,
+					3,
+					-2.5,
+					3
+				],
+				"symbol-placement": "line",
+				"symbol-spacing": [
+					"step",
+					[
+						"zoom"
+					],
+					250,
+					15,
+					500
+				],
+				"text-field": "{ref_number}",
+				"text-font": [
+					"NGATopo_Cn_reg",
+					"Open Sans Regular"
+				],
+				"text-letter-spacing": 0.05,
+				"text-rotation-alignment": "viewport",
+				"text-size": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					6,
+					9,
+					13,
+					11
+				],
+				"visibility": "visible"
+			},
+			"paint": {
+				"text-color": "rgba(0,0,0,1)"
+			},
+			"metadata": {
+				"feature:info": {
+					"feature:name": "Road Route Marker",
+					"feature:code": "No Code"
+				}
+			}
+		},
         {
-            "id": "routeMarker--national--USA",
-            "type": "symbol",
-            "source": "RBT",
-            "source-layer": "route_marker",
-            "minzoom": 9,
-            "filter": [
-                "all",
-                [
-                    "match",
-                    [
-                        "get",
-                        "subclass"
-                    ],
-                    "trunk",
-                    true,
-                    "primary",
-                    true,
-                    false
-                ],
-                [
-                    "==",
-                    [
-                        "get",
-                        "usa"
-                    ],
-                    1
-                ],
-                [
-                    "step",
-                    [
-                        "zoom"
-                    ],
-                    [
-                        "<=",
-                        [
-                            "get",
-                            "ref_len"
-                        ],
-                        6
-                    ],
-                    11,
-                    [
-                        "<=",
-                        [
-                            "get",
-                            "ref_len"
-                        ],
-                        10
-                    ]
-                ]
-            ],
-            "layout": {
-                "icon-image": "routeMarker-national-USA",
-                "icon-rotation-alignment": "viewport",
-                "icon-text-fit": "both",
-                "icon-text-fit-padding": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    9,
-                    [
-                        "literal",
-                        [
-                            1,
-                            1.5,
-                            -1.5,
-                            1.5
-                        ]
-                    ],
-                    13,
-                    [
-                        "literal",
-                        [
-                            1,
-                            3,
-                            -2,
-                            3
-                        ]
-                    ]
-                ],
-                "symbol-placement": "line",
-                "symbol-spacing": 1000,
-                "text-field": "{ref}",
-                "text-font": [
-                    "NGATopo_Cn_reg",
-                    "Arial-Unicode-Regular"
-                ],
-                "text-letter-spacing": 0.05,
-                "text-rotation-alignment": "viewport",
-                "text-size": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    9,
-                    9,
-                    13,
-                    11
-                ],
-                "visibility": "visible"
-            },
-            "paint": {
-                "text-color": "rgba(0,0,0,1)"
-            }
-        },
+			"id": "routeMarker--national--USA",
+			"type": "symbol",
+			"source": "RBT",
+			"source-layer": "osm_road",
+			"minzoom": 8,
+			"filter": [
+				"all",
+				[
+					"has",
+					"ref_number"
+				],
+				[
+					"<=",
+					[
+						"get",
+						"ref_number_len"
+					],
+					5
+				],
+				[
+					"match",
+					[
+						"get",
+						"route_type"
+					],
+					"US Hwy",
+					true,
+					false
+				],
+				[
+					"step",
+					[
+						"zoom"
+					],
+					[
+						"match",
+						[
+							"get",
+							"subclass"
+						],
+						[
+							"motorway",
+							"trunk",
+							"primary"
+						],
+						true,
+						false
+					],
+					10,
+					[
+						"match",
+						[
+							"get",
+							"subclass"
+						],
+						[
+							"motorway",
+							"trunk",
+							"primary",
+							"secondary"
+						],
+						true,
+						false
+					]
+				]
+			],
+			"layout": {
+				"icon-image": "routeMarker-national-USA",
+				"icon-rotation-alignment": "viewport",
+				"icon-text-fit": "both",
+				"icon-text-fit-padding": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					8,
+					[
+						"literal",
+						[
+							1,
+							1.5,
+							-1.5,
+							1.5
+						]
+					],
+					13,
+					[
+						"literal",
+						[
+							1,
+							4,
+							-2,
+							4
+						]
+					]
+				],
+				"symbol-placement": "line",
+				"symbol-spacing": [
+					"step",
+					[
+						"zoom"
+					],
+					250,
+					15,
+					500
+				],
+				"text-field": "{ref_number}",
+				"text-font": [
+					"NGATopo_Cn_reg",
+					"Open Sans Regular"
+				],
+				"text-letter-spacing": 0.05,
+				"text-rotation-alignment": "viewport",
+				"text-size": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					6,
+					9,
+					13,
+					11
+				],
+				"visibility": "visible"
+			},
+			"paint": {
+				"text-color": "rgba(0,0,0,1)"
+			},
+			"metadata": {
+				"feature:info": {
+					"feature:name": "Road Route Marker",
+					"feature:code": "No Code"
+				}
+			}
+		},
         {
-            "id": "routeMarker--nationalMotorway--nonUSA",
-            "type": "symbol",
-            "source": "RBT",
-            "source-layer": "route_marker",
-            "filter": [
-                "all",
-                [
-                    "==",
-                    [
-                        "get",
-                        "subclass"
-                    ],
-                    "trunk"
-                ],
-                [
-                    "==",
-                    [
-                        "get",
-                        "usa"
-                    ],
-                    0
-                ],
-                [
-                    "step",
-                    [
-                        "zoom"
-                    ],
-                    [
-                        "<=",
-                        [
-                            "get",
-                            "ref_len"
-                        ],
-                        6
-                    ],
-                    11,
-                    [
-                        "<=",
-                        [
-                            "get",
-                            "ref_len"
-                        ],
-                        10
-                    ]
-                ]
-            ],
-            "layout": {
-                "icon-image": "routeMarker-nationalMotorway-nonUSA",
-                "icon-rotation-alignment": "viewport",
-                "icon-text-fit": "both",
-                "icon-text-fit-padding": [
-                    -1,
-                    3,
-                    -2,
-                    3
-                ],
-                "symbol-placement": "line",
-                "symbol-spacing": 1000,
-                "text-field": "{ref}",
-                "text-font": [
-                    "NGATopo_Cn_reg",
-                    "Arial-Unicode-Regular"
-                ],
-                "text-letter-spacing": 0.05,
-                "text-rotation-alignment": "viewport",
-                "text-size": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    9,
-                    9,
-                    13,
-                    11
-                ],
-                "visibility": "visible"
-            },
-            "paint": {
-                "text-color": "rgba(0,0,0,1)"
-            }
-        },
-        {
-            "id": "routeMarker--nationalMotorway--USA",
-            "type": "symbol",
-            "source": "RBT",
-            "source-layer": "route_marker",
-            "filter": [
-                "all",
-                [
-                    "==",
-                    [
-                        "get",
-                        "subclass"
-                    ],
-                    "motorway"
-                ],
-                [
-                    "==",
-                    [
-                        "get",
-                        "usa"
-                    ],
-                    1
-                ],
-                [
-                    "step",
-                    [
-                        "zoom"
-                    ],
-                    [
-                        "<=",
-                        [
-                            "get",
-                            "ref_len"
-                        ],
-                        6
-                    ],
-                    11,
-                    [
-                        "<=",
-                        [
-                            "get",
-                            "ref_len"
-                        ],
-                        10
-                    ]
-                ]
-            ],
-            "layout": {
-                "icon-image": "routeMarker-nationalMotorway-USA",
-                "icon-rotation-alignment": "viewport",
-                "icon-text-fit": "both",
-                "icon-text-fit-padding": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    9,
-                    [
-                        "literal",
-                        [
-                            1,
-                            1.5,
-                            -1,
-                            1.5
-                        ]
-                    ],
-                    13,
-                    [
-                        "literal",
-                        [
-                            1,
-                            2,
-                            -1.5,
-                            2
-                        ]
-                    ]
-                ],
-                "symbol-placement": "line",
-                "text-field": "{ref}",
-                "text-font": [
-                    "NGATopo_Cn_reg",
-                    "Arial-Unicode-Regular"
-                ],
-                "text-letter-spacing": 0.05,
-                "text-rotation-alignment": "viewport",
-                "text-size": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    9,
-                    9,
-                    13,
-                    11
-                ],
-                "visibility": "visible"
-            },
-            "paint": {
-                "text-color": "rgba(0,0,0,1)"
-            }
-        },
-        {
-            "id": "routeMarker--international--nonUSA",
-            "type": "symbol",
-            "source": "RBT",
-            "source-layer": "route_marker",
-            "filter": [
-                "all",
-                [
-                    "==",
-                    [
-                        "get",
-                        "subclass"
-                    ],
-                    "motorway"
-                ],
-                [
-                    "==",
-                    [
-                        "get",
-                        "usa"
-                    ],
-                    0
-                ],
-                [
-                    "step",
-                    [
-                        "zoom"
-                    ],
-                    [
-                        "<=",
-                        [
-                            "get",
-                            "ref_len"
-                        ],
-                        6
-                    ],
-                    11,
-                    [
-                        "<=",
-                        [
-                            "get",
-                            "ref_len"
-                        ],
-                        10
-                    ]
-                ]
-            ],
-            "layout": {
-                "icon-image": "routeMarker-international",
-                "icon-rotation-alignment": "viewport",
-                "icon-text-fit": "both",
-                "icon-text-fit-padding": [
-                    0,
-                    4,
-                    -2,
-                    4
-                ],
-                "symbol-placement": "line",
-                "text-field": "{ref}",
-                "text-font": [
-                    "NGATopo_Cn_reg",
-                    "Arial-Unicode-Regular"
-                ],
-                "text-letter-spacing": 0.05,
-                "text-rotation-alignment": "viewport",
-                "text-size": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    9,
-                    9,
-                    13,
-                    11
-                ],
-                "visibility": "visible"
-            },
-            "paint": {
-                "text-color": "rgba(0,0,0,1)"
-            }
-        },
+			"id": "routeMarker--nationalMotorway--USA",
+			"type": "symbol",
+			"source": "RBT",
+			"source-layer": "osm_road",
+			"minzoom": 6,
+			"filter": [
+				"all",
+				[
+					"has",
+					"ref_number"
+				],
+				[
+					"<=",
+					[
+						"get",
+						"ref_number_len"
+					],
+					5
+				],
+				[
+					"match",
+					[
+						"get",
+						"route_type"
+					],
+					"Interstate",
+					true,
+					false
+				],
+				[
+					"step",
+					[
+						"zoom"
+					],
+					[
+						"match",
+						[
+							"get",
+							"subclass"
+						],
+						[
+							"motorway",
+							"trunk"
+						],
+						true,
+						false
+					],
+					8,
+					[
+						"match",
+						[
+							"get",
+							"subclass"
+						],
+						[
+							"motorway",
+							"trunk",
+							"primary"
+						],
+						true,
+						false
+					],
+					10,
+					[
+						"match",
+						[
+							"get",
+							"subclass"
+						],
+						[
+							"motorway",
+							"trunk",
+							"primary",
+							"secondary"
+						],
+						true,
+						false
+					]
+				]
+			],
+			"layout": {
+				"icon-image": "routeMarker-nationalMotorway-USA",
+				"icon-rotation-alignment": "viewport",
+				"icon-text-fit": "both",
+				"icon-text-fit-padding": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					6,
+					[
+						"literal",
+						[
+							1,
+							1,
+							-1,
+							1
+						]
+					],
+					13,
+					[
+						"literal",
+						[
+							1.5,
+							2,
+							-1,
+							2
+						]
+					]
+				],
+				"symbol-placement": "line",
+				"symbol-spacing": [
+					"step",
+					[
+						"zoom"
+					],
+					250,
+					15,
+					500
+				],
+				"text-field": "{ref_number}",
+				"text-font": [
+					"NGATopo_Cn_reg",
+					"Open Sans Regular"
+				],
+				"text-letter-spacing": 0.05,
+				"text-rotation-alignment": "viewport",
+				"text-size": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					6,
+					9,
+					13,
+					11
+				],
+				"visibility": "visible"
+			},
+			"paint": {
+				"text-color": "rgba(0,0,0,1)"
+			},
+			"metadata": {
+				"feature:info": {
+					"feature:name": "Road Route Marker",
+					"feature:code": "No Code"
+				}
+			}
+		},
         {
             "id": "heliport",
             "type": "symbol",
@@ -3204,6 +6031,12 @@
                     "heliport-22"
                 ],
                 "symbol-avoid-edges": true
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Heliport",
+                    "feature:code": "GB035"
+                }
             }
         },
         {
@@ -3468,7 +6301,7 @@
                         "literal",
                         [
                             "NGATopo_Cn_reg",
-                            "Arial-Unicode-Regular"
+                            "Open Sans Regular"
                         ]
                     ],
                     13,
@@ -3476,7 +6309,7 @@
                         "literal",
                         [
                             "NGATopo_Cn_bld",
-                            "Arial-Unicode-Bold"
+                            "Open Sans Bold"
                         ]
                     ]
                 ],
@@ -3528,6 +6361,12 @@
                 "text-halo-blur": 1,
                 "text-halo-color": "rgba(255,255,255,1)",
                 "text-halo-width": 1
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Built Up Area",
+                    "feature:code": "AL020"
+                }
             }
         },
         {
@@ -3630,7 +6469,7 @@
                         "literal",
                         [
                             "NGATopo_Cn_reg",
-                            "Arial-Unicode-Regular"
+                            "Open Sans Regular"
                         ]
                     ],
                     13,
@@ -3638,7 +6477,7 @@
                         "literal",
                         [
                             "NGATopo_Cn_bld",
-                            "Arial-Unicode-Bold"
+                            "Open Sans Bold"
                         ]
                     ]
                 ],
@@ -3698,6 +6537,12 @@
                     8,
                     1.5
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Built Up Area",
+                    "feature:code": "AL020"
+                }
             }
         },
         {
@@ -3756,7 +6601,7 @@
                 ],
                 "text-font": [
                     "NGATopo_Cn_bld",
-                    "Arial-Unicode-Bold"
+                    "Open Sans Bold"
                 ],
                 "text-justify": "auto",
                 "text-max-width": 6,
@@ -3814,10 +6659,16 @@
                     8,
                     1.5
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Built Up Area",
+                    "feature:code": "AL020"
+                }
             }
         },
         {
-            "id": "admin--firstOrderUSA--label",
+            "id": "adminSub--firstOrderUSA--label",
             "type": "symbol",
             "source": "RBT",
             "source-layer": "gadm1_name",
@@ -3837,7 +6688,7 @@
                 "text-field": "{name_1}",
                 "text-font": [
                     "NGATopo_Cn_bld",
-                    "Arial-Unicode-Bold"
+                    "Open Sans Bold"
                 ],
                 "text-letter-spacing": [
                     "step",
@@ -3888,10 +6739,16 @@
                     8,
                     1.5
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Administrative Subdivision",
+                    "feature:code": "FA003"
+                }
             }
         },
         {
-            "id": "admin--firstOrder--label",
+            "id": "adminSub--firstOrder--label",
             "type": "symbol",
             "source": "RBT",
             "source-layer": "adm1_labels",
@@ -4059,7 +6916,7 @@
                 "text-field": "{adm1_name}",
                 "text-font": [
                     "NGATopo_Cn_bld",
-                    "Arial-Unicode-Bold"
+                    "Open Sans Bold"
                 ],
                 "text-letter-spacing": [
                     "step",
@@ -4143,6 +7000,12 @@
                     8,
                     1.5
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Administrative Subdivision",
+                    "feature:code": "FA003"
+                }
             }
         },
         {
@@ -4330,14 +7193,14 @@
                             "literal",
                             [
                                 "NGATopo_Cn_bld",
-                                "Arial-Unicode-Bold"
+                                "Open Sans Bold"
                             ]
                         ]
                     }
                 ],
                 "text-font": [
                     "NGATopo_Cn_reg",
-                    "Arial-Unicode-Regular"
+                    "Open Sans Regular"
                 ],
                 "text-justify": "auto",
                 "text-radial-offset": 0.6,
@@ -4372,6 +7235,12 @@
                 "text-halo-blur": 1,
                 "text-halo-color": "rgba(255,255,255,1)",
                 "text-halo-width": 1.5
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Land Aerodrome",
+                    "feature:code": "GB005"
+                }
             }
         },
         {
@@ -4567,14 +7436,14 @@
                             "literal",
                             [
                                 "NGATopo_Cn_bld",
-                                "Arial-Unicode-Bold"
+                                "Open Sans Bold"
                             ]
                         ]
                     }
                 ],
                 "text-font": [
                     "NGATopo_Cn_reg",
-                    "Arial-Unicode-Regular"
+                    "Open Sans Regular"
                 ],
                 "text-justify": "auto",
                 "text-radial-offset": [
@@ -4621,6 +7490,12 @@
                 "text-halo-blur": 1,
                 "text-halo-color": "rgba(255,255,255,1)",
                 "text-halo-width": 1.5
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Land Aerodrome",
+                    "feature:code": "GB005"
+                }
             }
         },
         {
@@ -4676,7 +7551,7 @@
                 "text-field": "{sitename}",
                 "text-font": [
                     "NGATopo_Cn_reg",
-                    "Arial-Unicode-Regular"
+                    "Open Sans Regular"
                 ],
                 "text-size": [
                     "interpolate",
@@ -4725,6 +7600,12 @@
                 "text-halo-blur": 1,
                 "text-halo-color": "rgba(255,255,255,1)",
                 "text-halo-width": 1.5
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Military Installation",
+                    "feature:code": "SU001"
+                }
             }
         },
         {
@@ -4786,7 +7667,7 @@
                 ],
                 "text-font": [
                     "NGATopo_Cn_bld",
-                    "Arial-Unicode-Bold"
+                    "Open Sans Bold"
                 ],
                 "text-justify": "auto",
                 "text-max-width": 6,
@@ -4845,6 +7726,12 @@
                     8,
                     1.5
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Built Up Area",
+                    "feature:code": "AL020"
+                }
             }
         },
         {
@@ -4955,7 +7842,7 @@
                 ],
                 "text-font": [
                     "NGATopo_Cn_bld",
-                    "Arial-Unicode-Bold"
+                    "Open Sans Bold"
                 ],
                 "text-justify": "auto",
                 "text-max-width": 8,
@@ -5014,6 +7901,12 @@
                     8,
                     1.5
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Built Up Area",
+                    "feature:code": "AL020"
+                }
             }
         },
         {
@@ -5147,7 +8040,7 @@
                 "text-field": "{adm0_name}",
                 "text-font": [
                     "NGATopo_Cn_bld",
-                    "Arial-Unicode-Bold"
+                    "Open Sans Bold"
                 ],
                 "text-max-width": 6,
                 "text-size": [
@@ -5216,6 +8109,12 @@
                     8,
                     1.5
                 ]
+            },
+            "metadata": {
+                "feature:info": {
+                    "feature:name": "Administrative Boundary",
+                    "feature:code": "FA000"
+                }
             }
         }
     ],
