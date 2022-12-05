@@ -21,13 +21,13 @@
     },
     "data": {
         "RBT": {
-            "mbtiles": "rbt_liechtenstein.mbtiles"
+            "mbtiles": "rbt.mbtiles"
         },
         "HILLSHADE": {
-            "mbtiles": "hillshade_liechtenstein.mbtiles"
+            "mbtiles": "hillshade.mbtiles"
         },
 	"LANDCOVER": {
-		"mbtiles": "landcover_liechtenstein.mbtiles"
+		"mbtiles": "landcover.mbtiles"
 	}
     },
     "styles": {
