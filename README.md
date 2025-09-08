@@ -8,7 +8,7 @@ The RBT prototype is funded by [NGA](https://www.nga.mil/) and development, demo
 The RBT prototype is deployed as a containerized application using a modified version of [TileserverGL](https://hub.docker.com/repository/registry-1.docker.io/mjj203/rbt/tags?page=1&ordering=last_updated), that uses [MapLibre](https://maplibre.org/) instead of [MapboxGL](https://www.mapbox.com/mapbox-gljs), and enables EPSG:3395 projections for both WMTS and TileJSON endpoints. The `start.sh` script is an easy way to deploy the current config, styles, data, and fonts within this repo. Just clone this repo with [Git](https://git-scm.com/) to any linux or Windows WSL system with [Docker](https://www.docker.com/) installed, and run `./start.sh` within the root directory.
 
 ```
-git clone https://github.com/mjj203/agc-rbt.git
+git clone https://github.com/agcgeoint/rbt.git
 cd rbt
 ./start.sh
 ```
@@ -129,7 +129,7 @@ docker --version
 From the WSL distribution you can now clone the repo and run the start script.
 
 ```
-git clone https://github.com/mjj203/agc-rbt.git
+git clone https://github.com/agcgeoint/rbt.git
 cd rbt
 ./start.sh
 ```
